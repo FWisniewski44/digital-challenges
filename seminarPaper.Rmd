@@ -1,25 +1,30 @@
 ---
-author: "Florian Wisniewski"
+author: 
+  - "Florian Wisniewski^[Otto-Friedrich-Universität Bamberg (Matriculation Nr.: 2028075) - 3rd semester, M. A. Political Science]"
+  - "Am Werkkanal 9, 96047 Bamberg | florian.wisniewski@stud.uni-bamberg.de"
 date: '15-04-2022'
 title: | 
   <center>![](/Users/flo/Documents/backup_doc_linux/uni-bamberg.png){width=4cm}</center>
-  Seminar paper with a catchy title
-subtitle: "digital challenges"
+  Technocracy as a challenge to representative democracy
+subtitle: "Citizens' attitudes towards technocracy and what to make of it"
 output:
   pdf_document:
     number_sections: true
     latex_engine: "xelatex"
+    keep_tex: TRUE
 abstract: "placeholder for abstract."
-lang: "en"
+lang: "EN"
+nocite: |
+    @evs2017
 documentclass: "article"
 geometry: "left=2.5cm,right=2.5cm,top=2cm,bottom=2cm"
 mainfont: "Times New Roman"
 fontsize: "12pt"
+linestretch: "1.5"
 linkcolor: "blue"
 citecolor: "blue"
 urlcolor: "blue"
-biblio-style: "APA"
-biblio-title: "References"
+csl: "apa.csl"
 bibliography: "bibfile_css2.bib"
 link-citations: true
 ---
@@ -28,6 +33,30 @@ link-citations: true
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r libraries and wd, include = FALSE}
+# libraries
+library(tidyverse)
+library(tidymodels)
+library(readr)
+library(MASS)
+library(broom)
+library(Amelia)
+library(Hmisc)
+library(summarytools)
+library(d3heatmap)
+library(car)
+library(haven)
+library(bookdown)
+library(pagedown)
+library(ymlthis)
+library(esquisse)
+library(distill)
+
+# set wd
+setwd(dir = "/Users/flo/Documents/Uni/Uni Bamberg/WS21-22/cs2-digital-challenges/digital-challenges")
+```
+
+
 \newpage{}
 
 \tableofcontents
@@ -35,18 +64,77 @@ knitr::opts_chunk$set(echo = TRUE)
 \newpage{}
 
 # Introduction
-One of the most discussed themes in political science over the last years most definitely was populism. Especially in the US – with the rise of Donald Trump to become the 45th president  in 2017 and the accompanying transformation of the Republican Party – this phenomenon evolved into a well-researched topic. When talking and writing about it, one comes across many different definitions to the same term populism: Cas Mudde’s „populism as a thin ideology“ (Mudde 2004), Ernesto Laclau’s „populism as a discursive strategy“ (Laclau 2005), Jan-Werner Müller’s „methods of populism“ (Müller 2016) or the „ideational approach“ by Kirk Hawkins and Cristóbal Rovira Kaltwasser (Hawkins & Rovira Kaltwasser 2019).
+One of the most discussed themes in political science over the last years most definitely was _populism_. Especially in the US – with the rise of Donald Trump to become the 45th president  in 2017 and the accompanying transformation of the Republican Party – this phenomenon evolved into a well-researched topic. But not only there: also in Europe, the rise of populism and populist politicians became a big issue, also within the scientific community - namely triggered by e. g. SYRIZA's rise to power in Greece, the emergence of the AfD as a right-wing populist party in Germany, or the presidential race in France being decided between the liberal candidate Macron and the right-wing populist Marine Le Pen.
+When talking and writing about it, one comes across many different definitions to the same term populism: Cas Mudde’s 'populism as a thin ideology' [@mudde2004populist], Ernesto Laclau’s 'populism as a discursive strategy' [@laclau2005populist], Jan-Werner Müller’s 'methods of populism' [@müller2016populismus] or the 'ideational approach' by Kirk Hawkins and Cristóbal Rovira Kaltwasser [@hawkins2018ideational].
 
-But populism is by far not the only „alternative approach“ to a representatively democratic political system. One of the other possible views is technocracy, and research within this space is still very fluid and evolving in this field within political science.
+But populism is by far not the only 'alternative approach' to representative democracy. One of the other possible views is technocracy, and research within this space is still very fluid and evolving in this field within political science. But a lot of said research has so far often concentrated on the more normative aspects of technocracy [@habermas2015lure] or has taken a rather expert-centered stance, discussing the determination of who the experts would be and who chooses when someone is considered one [@bickerton2020technocracy]. But there is more to _'technocracy' as a whole topic_ than that
+
+This paper seeks to take a more citizen-centered approach: the question that will be addressed is about their attitudes towards this alternative concept of government and governance.Other social scientists, such as Eri Bertsou and Guilia Pastorella, have taken up this narrative before and have shown that there is significant homogeneity throughout Europe's people when talking about their opinions of technocracy [@bertsou2017technocratic]. However, the data they used was from back in 2009; this makes it highly likely that citizens' attitudes towards technocracy may have evolved and changed over time, especially considering events after 2009 up to the origin of the newer data set in 2017, like the Brexit referendum or the aftermath of the financial crisis in Europe.
+
+Therefore, taking survey data about citizens' stances towards technocracy in European countries, the  this exploratory analysis aims at shedding more light upon the real-world implications of technocracy as a normative concept with updated data and see if previously obtained results nowadays still hold. Also, as a secondary goal, it shall be examined if there are certain patterns within the cross-national data that promise even more interesting research perspectives for the future.
+
+<!-- memo an mich: überlege mal, ob das neu zu schreiben ist, wenn man mehr greifbares in den händen hat... -->
+
+\newpage{}
 
 # Theoretical considerations
+## What even is technocracy, really?
 
-## Defining technocracy and separating it from populism and democracy
+<!-- + Caramani 2020 -->
+<!-- + Dahl's 'On Democracy' -->
+<!-- + Bertsou's works -->
+<!-- + Plato's Republic -->
+
+As mentioned in the introductory paragraph, technocracy could be considered a still evolving field of action within the social sciences. But that does not mean that there is nothing to draw from in theory. Technocracy as a concept is first mentioned or described by Plato (stemming from the Greek _'techne'_, translated as 'art' or 'craft'). As explained by Bickerton and Accetti, this is what can be considered the classical argument for technocracy: Plato believed that to really fulfill the goal of _good_ government, i. e. to justly rule and bring order to the social lives of the people within society, the one who governs needs to have suitable skills to do so. Those, they further interpret Plato, can be found in the philosophers: they would know about and have the skills required to do so [see @bickerton2020technocracy, pp. 32f.].
+
+Another account of what can be considered technocracy has been given by Robert A. Dahl in 'On Democracy'. He takes a position of staunch resistance from a democracy-theoretical point of view, stating:
+> _Because experts may be qualified to serve as your agents does not mean that they are qualified to serve as your rulers._ [@dahl_onDemocracy]
+
+Thereby, he made the exact opposite point to the argument Plato made, that was described before. The latter assumed the philosopher-kings (so to say, the proto-technocrats) to be the best possible rulers because they have a certain set of skills that the broad masses do not have, thus causing chaos when democracy is the form of governance.
+Dahl on the other hand brings forth the notion of _corruption through power_ - by which the pursuit of the 'greater good' for the whole society, which was being projected onto the philosopher-kings, can be undermined.
+
+## The difficult relationship between technocracy and populism and technocratic vs. populist attitudes
+
+<!-- + maybe include technopopulism? -->
+<!-- + Deseriis -->
+<!-- + Bickerton/Accetti -->
+
+## (Hypotheses?)
+
+<!-- + hypotheses in Bertsou/Pastorella 2017 -->
+<!-- + other Bertsou papers? -->
+<!-- + Caramani? -->
+<!-- + the Caramani/Bertsou book on technocracy 2020? -->
 
 # Methods and data
 
+<!-- + describe the EVS -->
+<!-- + describe the independent variable -->
+<!-- + describe the explanatory variables with regard to how they exactly operationalize the points mentioned under paragraph 2 -->
+<!-- + describe the method of choice (logistic regression? do we need to control for country effects? hierarchical models?) -->
+
+Theoretically and practically building upon @bertsou2017technocratic, this paper also utilizes data from the European Values Study (EVS).
+
 # Analysis and results
+
+<!-- + present results -->
+<!-- + graphics and regression tables -->
+<!-- + just description in the beginning; rest will be in discussion paragraph -->
 
 # Discussion of results and final considerations
 
+<!-- + discuss what we found out -->
+<!-- + discuss what that means with regard to especially Bertsou/Pastorella's findings from 2017 with the old data -->
+<!-- + discuss if there are any implications about what should be examined more closely in the future (if any?) -->
+<!--   + I do expect greece, italy to show some interesting values -->
+<!--   + Jungherr mentioned portugal, so watch out for that too -->
+
+\newpage{}
+
 # References
+
+<div id="refs"></div>
+
+\newpage{}
+
+# Appendix
