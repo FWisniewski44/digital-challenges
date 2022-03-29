@@ -1,0 +1,52 @@
+---
+author: "Florian Wisniewski"
+date: '15-04-2022'
+title: | 
+  <center>![](/Users/flo/Documents/backup_doc_linux/uni-bamberg.png){width=4cm}</center>
+  Seminar paper with a catchy title
+subtitle: "digital challenges"
+output:
+  pdf_document:
+    number_sections: true
+    latex_engine: "xelatex"
+abstract: "placeholder for abstract."
+lang: "en"
+documentclass: "article"
+geometry: "left=2.5cm,right=2.5cm,top=2cm,bottom=2cm"
+mainfont: "Times New Roman"
+fontsize: "12pt"
+linkcolor: "blue"
+citecolor: "blue"
+urlcolor: "blue"
+biblio-style: "APA"
+biblio-title: "References"
+bibliography: "bibfile_css2.bib"
+link-citations: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage{}
+
+\tableofcontents
+
+\newpage{}
+
+# Introduction
+One of the most discussed themes in political science over the last years most definitely was populism. Especially in the US – with the rise of Donald Trump to become the 45th president  in 2017 and the accompanying transformation of the Republican Party – this phenomenon evolved into a well-researched topic. When talking and writing about it, one comes across many different definitions to the same term populism: Cas Mudde’s „populism as a thin ideology“ (Mudde 2004), Ernesto Laclau’s „populism as a discursive strategy“ (Laclau 2005), Jan-Werner Müller’s „methods of populism“ (Müller 2016) or the „ideational approach“ by Kirk Hawkins and Cristóbal Rovira Kaltwasser (Hawkins & Rovira Kaltwasser 2019).
+
+But populism is by far not the only „alternative approach“ to a representatively democratic political system. One of the other possible views is technocracy, and research within this space is still very fluid and evolving in this field within political science.
+
+# Theoretical considerations
+
+## Defining technocracy and separating it from populism and democracy
+
+# Methods and data
+
+# Analysis and results
+
+# Discussion of results and final considerations
+
+# References
