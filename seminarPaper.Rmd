@@ -87,17 +87,16 @@ Therefore, taking survey data about citizens' stances towards technocracy in Eur
 
 As mentioned in the introductory paragraph, technocracy could be considered a still evolving field of action within the social sciences. But that does not mean that there is nothing to draw from in theory. Technocracy as a concept is first mentioned or described by Plato (stemming from the Greek _'techne'_, translated as 'art' or 'craft'). As explained by Bickerton and Accetti, this is what can be considered the classical argument for technocracy: Plato believed that to really fulfill the goal of _good_ government, i. e. to justly rule and bring order to the social lives of the people within society, the one who governs needs to have suitable skills to do so. Those, they further interpret Plato, can be found in the philosophers: they would know about and have the skills required to do so [see @bickerton2020technocracy, pp. 32f.].
 
-Another account of what can be considered technocracy has been given by Robert A. Dahl in 'On Democracy'. He takes a position of staunch resistance from a democracy-theoretical point of view, stating:
-> _Because experts may be qualified to serve as your agents does not mean that they are qualified to serve as your rulers._ [@dahl_onDemocracy]
+Another account of what can be considered technocracy has been given by Robert A. Dahl in his classic 'On Democracy' in the chapter 'Ideal Democracy'. He takes a position of staunch resistance from a democracy-theoretical point of view, stating: _"Because experts may be qualified to serve as your agents does not mean that they are qualified to serve as your rulers."_ [@dahl_onDemocracy, p. 73]
 
-Thereby, he made the exact opposite point to the argument Plato made, that was described before. The latter assumed the philosopher-kings (so to say, the proto-technocrats) to be the best possible rulers because they have a certain set of skills that the broad masses do not have, thus causing chaos when democracy is the form of governance.
-Dahl on the other hand brings forth the notion of _corruption through power_ - by which the pursuit of the 'greater good' for the whole society, which was being projected onto the philosopher-kings, can be undermined.
+Thereby, he made the exact opposite point to Plato's argument described before. The latter assumed the philosopher-kings (so to say, the proto-technocrats) to be the best possible rulers because they have a certain set of skills that the broad masses do not have, thus causing chaos when democracy is the form of governance.
+Dahl on the other hand brings forth the notion of _corruption through power_ --- by which the pursuit of the 'greater good' for the whole society, which was being projected onto the philosopher-kings, can be undermined.
 
 ## The difficult relationship between technocracy and populism and technocratic vs. populist attitudes
 
 <!-- + maybe include technopopulism? -->
 <!-- + Deseriis -->
-<!-- + Bickerton/Accetti -->
+<!-- + Bickerton/Accetti, the book -->
 
 ## (Hypotheses?)
 
