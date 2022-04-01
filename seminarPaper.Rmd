@@ -12,13 +12,13 @@ output:
     number_sections: true
     latex_engine: "xelatex"
     keep_tex: TRUE
-abstract: "placeholder for abstract."
+abstract: "This paper will revolve around the topic of technocracy. Whilst it has been examined in detail on state level, research about citizens' attitudes towards this concept of government is still rather scarce. Building remotely upon the hypotheses and findings of Bertsou & Pastorella (2017), this paper has a twofold goal: first, it will function at least partially as a replication study to aforementioned research, testing parts of the results for validity with newer data available. Secondly, new inferences could be drawn (if found)."
 lang: "EN"
 nocite: |
     @evs2017
 documentclass: "article"
 geometry: "left=2.5cm,right=2.5cm,top=2cm,bottom=2cm"
-mainfont: "Times New Roman"
+mainfont: "Tahoma"
 fontsize: "12pt"
 linestretch: "1.5"
 linkcolor: "blue"
@@ -64,12 +64,12 @@ setwd(dir = "/Users/flo/Documents/Uni/Uni Bamberg/WS21-22/cs2-digital-challenges
 \newpage{}
 
 # Introduction
-One of the most discussed themes in political science over the last years most definitely was _populism_. Especially in the US – with the rise of Donald Trump to become the 45th president  in 2017 and the accompanying transformation of the Republican Party – this phenomenon evolved into a well-researched topic. But not only there: also in Europe, the rise of populism and populist politicians became a big issue, also within the scientific community - namely triggered by e. g. SYRIZA's rise to power in Greece, the emergence of the AfD as a right-wing populist party in Germany, or the presidential race in France being decided between the liberal candidate Macron and the right-wing populist Marine Le Pen.
+One of the most discussed themes in political science over the last years most definitely was _populism_. Especially in the US – with the rise of Donald Trump to become the 45th president  in 2017 and the accompanying transformation of the Republican Party – this phenomenon evolved into a well-researched topic. But not only there: also in Europe, the rise of populism and populist politicians became a big issue, also within the scientific community - namely triggered by e. g. left-wing populist SYRIZA's rise to power in Greece, the emergence of the AfD as a right-wing populist party in Germany, or the presidential race in France being decided between the liberal candidate Macron and the right-wing or even far right populist Marine Le Pen.
 When talking and writing about it, one comes across many different definitions to the same term populism: Cas Mudde’s 'populism as a thin ideology' [@mudde2004populist], Ernesto Laclau’s 'populism as a discursive strategy' [@laclau2005populist], Jan-Werner Müller’s 'methods of populism' [@müller2016populismus] or the 'ideational approach' by Kirk Hawkins and Cristóbal Rovira Kaltwasser [@hawkins2018ideational].
 
-But populism is by far not the only 'alternative approach' to representative democracy. One of the other possible views is technocracy, and research within this space is still very fluid and evolving in this field within political science. But a lot of said research has so far often concentrated on the more normative aspects of technocracy [@habermas2015lure] or has taken a rather expert-centered stance, discussing the determination of who the experts would be and who chooses when someone is considered one [@bickerton2020technocracy]. But there is more to _'technocracy' as a whole topic_ than that
+But populism is by far not the only 'alternative approach' to representative democracy. One of the other possible views is technocracy, and research within this space is still very fluid and evolving in this field within political science. A lot of said research has so far often concentrated on the more normative aspects of technocracy [@habermas2015lure] or has taken a rather expert-centered stance, discussing the determination of who the experts would be and who chooses when someone is considered one [@bickerton2020technocracy]. But there is more to _'technocracy' as a whole topic_ than that. For example, one could also ask the question of how the citizens themselves see this concept in turn.
 
-This paper seeks to take a more citizen-centered approach: the question that will be addressed is about their attitudes towards this alternative concept of government and governance.Other social scientists, such as Eri Bertsou and Guilia Pastorella, have taken up this narrative before and have shown that there is significant homogeneity throughout Europe's people when talking about their opinions of technocracy [@bertsou2017technocratic]. However, the data they used was from back in 2009; this makes it highly likely that citizens' attitudes towards technocracy may have evolved and changed over time, especially considering events after 2009 up to the origin of the newer data set in 2017, like the Brexit referendum or the aftermath of the financial crisis in Europe.
+This paper seeks to take this more citizen-centered approach: the question that will be addressed is about their attitudes towards this alternative concept of government and governance. Other social scientists have very recently taken up this narrative before and have shown that there is significant homogeneity throughout Europe's people when talking about their opinions of technocracy (see e. g. @bertsou2017technocratic, @ganuza2020experts, @lavezzolo2021will, @chiru2022wants or @bertsou2022people). However, the data they used was from back in 2009; this makes it highly likely that citizens' attitudes towards technocracy may have evolved and changed over time, especially considering events after 2009 up to the origin of the newer data set in 2017, like the Brexit referendum or the aftermath of the financial crisis in Europe.
 
 Therefore, taking survey data about citizens' stances towards technocracy in European countries, the  this exploratory analysis aims at shedding more light upon the real-world implications of technocracy as a normative concept with updated data and see if previously obtained results nowadays still hold. Also, as a secondary goal, it shall be examined if there are certain patterns within the cross-national data that promise even more interesting research perspectives for the future.
 
@@ -78,25 +78,40 @@ Therefore, taking survey data about citizens' stances towards technocracy in Eur
 \newpage{}
 
 # Theoretical considerations
-## What even is technocracy, really?
+## Conceptual background: defining the concept of technocracy and 
 
 <!-- + Caramani 2020 -->
 <!-- + Dahl's 'On Democracy' -->
 <!-- + Bertsou's works -->
 <!-- + Plato's Republic -->
+<!-- + McDonnell & Valbruzzi 2014 -->
+<!-- + differentiation from stealth democracy -->
 
 As mentioned in the introductory paragraph, technocracy could be considered a still evolving field of action within the social sciences. But that does not mean that there is nothing to draw from in theory. Technocracy as a concept is first mentioned or described by Plato (stemming from the Greek _'techne'_, translated as 'art' or 'craft'). As explained by Bickerton and Accetti, this is what can be considered the classical argument for technocracy: Plato believed that to really fulfill the goal of _good_ government, i. e. to justly rule and bring order to the social lives of the people within society, the one who governs needs to have suitable skills to do so. Those, they further interpret Plato, can be found in the philosophers: they would know about and have the skills required to do so [see @bickerton2020technocracy, pp. 32f.].
 
 Another account of what can be considered technocracy has been given by Robert A. Dahl in his classic 'On Democracy' in the chapter 'Ideal Democracy'. He takes a position of staunch resistance from a democracy-theoretical point of view, stating: _"Because experts may be qualified to serve as your agents does not mean that they are qualified to serve as your rulers."_ [@dahl_onDemocracy, p. 73]
-
 Thereby, he made the exact opposite point to Plato's argument described before. The latter assumed the philosopher-kings (so to say, the proto-technocrats) to be the best possible rulers because they have a certain set of skills that the broad masses do not have, thus causing chaos when democracy is the form of governance.
 Dahl on the other hand brings forth the notion of _corruption through power_ --- by which the pursuit of the 'greater good' for the whole society, which was being projected onto the philosopher-kings, can be undermined.
 
-## The difficult relationship between technocracy and populism and technocratic vs. populist attitudes
+To further shed light on the term 'technocracy', the definition given by @caramani2020technocratic should be considered. He 
+
+## The road so far: what has been found out about technocracy on state- and individual level?
 
 <!-- + maybe include technopopulism? -->
 <!-- + Deseriis -->
 <!-- + Bickerton/Accetti, the book -->
+
+Now, after having defined in detail the implications of technocratic systems, the area of tension between representative democracy and technocracy, and the problem this paper wants to address, it is also necessary to take a look at what research so far has found out.
+
+To start off, @mcdonnell2014defining point out an important point, also relevant in the context of this paper: there is a recognizably different thrust throughout Europe when talking about the degree to which technocracy may be witnessed within national governments. They set three basic rules as to when a government is to be regarded as an ideal type technocratic one [see @mcdonnell2014defining, p. 656]:
+
+  1. Elected officials of parties do not make all governmental decisions.
+  2. Policies do not have their roots within parties which after deciding them, act to implement them.
+  3. High officials such as (prime) ministers do not have a party background.
+  
+By applying these rules, they classify governments in Europe between 1945 and 2013. They also discern between full technocratic governments and technocrat-led party governments. Examining their results, they see two implications: technocratic governments form more easily in countries where there is a stronger head of state, and this government type is more frequently observed in countries with weaker party systems or those, that only recently developed a democratic political system [see @mcdonnell2014defining, p. 666].
+
+@font2015participation apply these findings in their study about 
 
 ## (Hypotheses?)
 

@@ -30,13 +30,16 @@ setwd(dir = "/Users/flo/Documents/Uni/Uni Bamberg/WS21-22/cs2-digital-challenges
 # load data set --- evs2017
 evs2017 <- haven::read_sav(file = "evs2017.sav")
 evs2017 <- as_tibble(evs2017)
+fre(evs2017$year)
 
 ## dependent var: "Having experts, not government, make decisions according to what they think is best for the country"
 ## v146; renamed to "techno"
 
 fre(evs2017$v146)
 evs2017 <- evs2017 %>% rename(techno = v146)
-fre(evs2017$techno)
+# fre(evs2017$cntry_y)
+# 
+# evs2017 %>% dplyr::filter(year == 2018)
 
 # we need the following variables that Bertsou/Pastorella used, too:
 
@@ -80,6 +83,7 @@ evs_subset <- subset(evs2017, select = c("country", "techno", "v121", "v130", "v
 evs_subset <- evs_subset %>% rename(trustParl = v121, trustParties = v130, trustGov = v131,
                                     trustEU = v124, polInt = v97, lrScale = v102,
                                     educ = v243_r, educEISCED = v243_EISCED, attDemoc = v142)
+save(evs_subset, file = "evs_subset.RData")
 
 ## second step: display the pattern of the missing values
 md.pattern(evs_subset)
@@ -163,9 +167,43 @@ evs_imputed$polTrust <- evs_subset$polTrust
 evs_imputed$country <- as.factor(evs_imputed$country)
 
 # fitting a first model to see how it works
+testCountry <- glmer(data = evs_imputed, formula = techno ~ (1 | country), family = binomial("logit"))
+summary(testCountry)
+
 test <- glmer(data = evs_imputed, formula = techno ~ evs_imputed$polTrust + evs_imputed$attDemoc + evs_imputed$educ +
         evs_imputed$age + evs_imputed$lrScale + evs_imputed$polInt + evs_imputed$trustEU + 
         (1 | evs_imputed$country), family = binomial("logit"))
+summary(test)
+
+
+# maybe it could be a good idea to go more into the direction of testing the
+# 'communist/authoritarian party-based rule in the past'
+# hypothesis by Bertsou and Pastorella. Therefore, data could be split into two:
+
+## country type 1: countries with this experience (the South and Central Eastern European countries)
+## country type 2: countries without the experience (the rest)
+
+# this way, the multilevel regression could be ignored, as we will not be testing for special country-level vs.
+# individual-level variables, but take the citizens of these country groups as two distinct groups of people with this
+# 'country inheritance' or 'country socialization' (with the socialization aspect, the age argument could also be
+# rejected).
+
+## splitting into the two country-groups:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
