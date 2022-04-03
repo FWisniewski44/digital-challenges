@@ -18,7 +18,7 @@ nocite: |
     @evs2017
 documentclass: "article"
 geometry: "left=2.5cm,right=2.5cm,top=2cm,bottom=2cm"
-mainfont: "Tahoma"
+mainfont: "Times New Roman"
 fontsize: "12pt"
 linestretch: "1.5"
 linkcolor: "blue"
@@ -39,8 +39,11 @@ library(tidyverse)
 library(tidymodels)
 library(readr)
 library(MASS)
+library(lme4)
 library(broom)
 library(Amelia)
+library(mice)
+library(VIM)
 library(Hmisc)
 library(summarytools)
 library(d3heatmap)
@@ -51,9 +54,22 @@ library(pagedown)
 library(ymlthis)
 library(esquisse)
 library(distill)
+library(expss)
+library(rockchalk)
 
 # set wd
 setwd(dir = "/Users/flo/Documents/Uni/Uni Bamberg/WS21-22/cs2-digital-challenges/digital-challenges")
+
+load("evs_subset.RData")
+load("evs_imputed.RData")
+```
+
+```{r recoding binary technocracy variable, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+## binary coded technocracy variable
+evs_imputed$technoBin <- rockchalk::combineLevels(fac = evs_imputed$techno, levs = c(1,2), newLabel = "technocracy positive")
+evs_imputed$technoBin <- rockchalk::combineLevels(fac = evs_imputed$technoBin, levs = c("3","4"), newLabel = "technocracy negative")
+fre(evs_imputed$techno)
+fre(evs_imputed$technoBin)
 ```
 
 
@@ -89,11 +105,22 @@ Therefore, taking survey data about citizens' stances towards technocracy in Eur
 
 As mentioned in the introductory paragraph, technocracy could be considered a still evolving field of action within the social sciences. But that does not mean that there is nothing to draw from in theory. Technocracy as a concept is first mentioned or described by Plato (stemming from the Greek _'techne'_, translated as 'art' or 'craft'). As explained by Bickerton and Accetti, this is what can be considered the classical argument for technocracy: Plato believed that to really fulfill the goal of _good_ government, i. e. to justly rule and bring order to the social lives of the people within society, the one who governs needs to have suitable skills to do so. Those, they further interpret Plato, can be found in the philosophers: they would know about and have the skills required to do so [see @bickerton2020technocracy, pp. 32f.].
 
-Another account of what can be considered technocracy has been given by Robert A. Dahl in his classic 'On Democracy' in the chapter 'Ideal Democracy'. He takes a position of staunch resistance from a democracy-theoretical point of view, stating: _"Because experts may be qualified to serve as your agents does not mean that they are qualified to serve as your rulers."_ [@dahl_onDemocracy, p. 73]
-Thereby, he made the exact opposite point to Plato's argument described before. The latter assumed the philosopher-kings (so to say, the proto-technocrats) to be the best possible rulers because they have a certain set of skills that the broad masses do not have, thus causing chaos when democracy is the form of governance.
-Dahl on the other hand brings forth the notion of _corruption through power_ --- by which the pursuit of the 'greater good' for the whole society, which was being projected onto the philosopher-kings, can be undermined.
+Another aspect that describes the difference between democratic/representative and technocratic systems has been given by Robert A. Dahl in his classic 'On Democracy' in the chapter 'Ideal Democracy'. He takes a position of staunch resistance toward technocratic expert government, stating: _'Because experts may be qualified to serve as your agents does not mean that they are qualified to serve as your rulers.'_ [@dahl_onDemocracy, p. 73]
+Thereby, he made the exact opposite point to Plato's argument described before. The latter assumed the philosopher-kings (so to say, the 'proto-technocrats') to be the best possible rulers because they have a certain set of skills that the broad masses do not have and would apply it to achieve the greater good for all of society --- democracy as a form of governance, in turn, could cause chaos.
+Dahl on the other hand brings forth the notion of _corruption through power_, by which the pursuit of the 'greater good' for the whole society can be undermined. *Sobald Buch vorhanden, hier weiterschreiben*
 
-To further shed light on the term 'technocracy', the definition given by @caramani2020technocratic should be considered. He 
+To further shed light on the term 'technocracy', another definition given by @caramani2020technocratic should be considered. He considers it to be 'a form of power in which decisions over the allocation of values are made by experts or technical elites based on their knowledge, independently and in the long-term interest of the whole of society' [@caramani2020technocratic, p. 3].
+He further adds four features making government technocratic in nature [@caramani2020technocratic, pp. 3f.]:
+
+1. The source of power is knowledge, rather than popular will (e. g. through elections).
+
+2. Political representation is realized via a „trustee model“, where citizens lack the knowledge and wisdom to enter the political arena themselves. Their „trustees“ (i. e. the experts) do that for them, turning democracy and elections into a mere elite selection process.
+
+3. Politics is seen by the expert elites as a means to enhance the „greater good“ and acting in the common interest.
+
+4. The common interest itself is assessed through science, rationally, and as objective as possible, not by ideology or derived from pluralist preference aggregation within the people.
+
+For this paper, it is also important to discuss how technocracy may be measured. When doing attitudinal research with citizens, especially concerning elusive and heterogenous topics like technocracy, researchers have to be careful --- as not every respondent understands the same under such complex concepts. To 
 
 ## The road so far: what has been found out about technocracy on state- and individual level?
 
@@ -120,6 +147,27 @@ By applying these rules, they classify governments in Europe between 1945 and 20
 <!-- + Caramani? -->
 <!-- + the Caramani/Bertsou book on technocracy 2020? -->
 
+### individual level hypotheses
++ H1: If a person sees democracy in a positive light, in turn, he/she will see technocracy in a negative light.
++ H2: Technocracy is seen more negatively when trust in political institutions of representative democracy is higher.
++ H3: Higher trust in the (more technocratic) EU will lead to a more positive view of technocracy with citizens.
+
+### country level hypotheses
++ H4: Positive attitudes towards technocracy will occur more frequently in countries with more (perceived) corruption.
++ H5: Positive attitudes towards technocracy will occur more frequently in countries that are in a bad shape economically (via GDP p. c.).
++ H6: Countries that have experienced communist-authoritarian leadership in the past will show more positive attitudes towards technocracy. (especially in South/Central Eastern Europe)
++ H7: Countries that have already had experience with technocratic governments in the past will show more positive attitudes towards technocracy (via list in McDonnell/Valbruzzi 2014)
+
+### other hypotheses
++ H8 (individual, Chiru & Enyedi): People that are better educated will have more positive attitudes towards expert government (i. e. technocracy). ---> this is contrary to the stealth democracy-beliefs that the uneducated favour stealth democracy over representative status quo; they do not have clear findings for their 9 countries, so maybe test it for full EU
+
+### hypotheses with regard to science/technology vs. faith/religion
++ H9: People that, generally speaking, have a high opinion of science, technology, and knowledge tend to also view technocracy and government by experts in a more positive light. (I would build indices from WVS vars)
+  + reasoning: those people tend to view knowledge and expertise higher, therefore I would state that they would value expertise over 'mere' representative party politicians when talking about implementing what they consider important in areas like digitization, health care, military technology, etc.
++ H10: People that have stronger religious beliefs/are more religious/have more (religious) faith tend to view technocracy and government by experts/expertise in a more negative light.
+  + reasoning: people that have stronger religious beliefs generally tend to view science (and therefore also scientific reasoning) more critically, putting an emphasis on God's intervention, therefore being more critical of 'governance by reason' alone
+
+
 # Methods and data
 
 <!-- + describe the EVS -->
@@ -134,6 +182,15 @@ Theoretically and practically building upon @bertsou2017technocratic, this paper
 <!-- + present results -->
 <!-- + graphics and regression tables -->
 <!-- + just description in the beginning; rest will be in discussion paragraph -->
+
+```{r technocratic attitudes in citizens by countries --- recreation of Bertsou & Pastorella graphic with the EVS, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+ggplot(data = evs_imputed) + geom_bar(aes(y = c_abrv, fill = techno), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
+```
+
+```{r alternative plot, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+ggplot(data = evs_imputed) + geom_bar(aes(y = c_abrv, fill = technoBin), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
+```
+
 
 # Discussion of results and final considerations
 

@@ -21,6 +21,7 @@ library(ymlthis)
 library(esquisse)
 library(distill)
 library(expss)
+library(rockchalk)
 
 # set wd
 setwd(dir = "/Users/flo/Documents/Uni/Uni Bamberg/WS21-22/cs2-digital-challenges/digital-challenges")
@@ -37,6 +38,12 @@ fre(evs2017$year)
 
 fre(evs2017$v146)
 evs2017 <- evs2017 %>% rename(techno = v146)
+fre(evs2017$techno)
+fre(evs_imputed$techno)
+
+ggplot(data = evs_imputed) + geom_bar(aes(x = country, fill = techno))
+
+
 # fre(evs2017$cntry_y)
 # 
 # evs2017 %>% dplyr::filter(year == 2018)
@@ -53,7 +60,7 @@ evs2017 <- evs2017 %>% rename(techno = v146)
 
 ## political interest ---> v97
 
-## left-right ideology (quasi-metric---> v102
+## left-right ideology (numeric) ---> v102
 
 ## sex (ref. cat. male) (unordered) ---> v225
 
@@ -148,6 +155,7 @@ save(imputed, file = "impute_step.RData") ## to save time when R crashes and it 
 summary(imputed)
 imputed$imp$lrScale
 evs_imputed <- complete(imputed, 3)
+evs_imputed$c_abrv <- evs2017$c_abrv
 evs_imputed <- as_tibble(evs_imputed)
 save(evs_imputed, file = "evs_imputed.RData")
 
@@ -165,6 +173,13 @@ fre(evs_subset$polTrust) ## proof of concept: low value = low trust --- high val
 ## adding the index to evs_imputed, also countries
 evs_imputed$polTrust <- evs_subset$polTrust
 evs_imputed$country <- as.factor(evs_imputed$country)
+
+## binary coded technocracy variable
+evs_imputed$technoBin <- rockchalk::combineLevels(fac = evs_imputed$techno, levs = c(1,2), newLabel = "technocracy positive")
+evs_imputed$technoBin <- rockchalk::combineLevels(fac = evs_imputed$technoBin, levs = c("3","4"), newLabel = "technocracy negative")
+fre(evs_imputed$techno)
+fre(evs_imputed$technoBin)
+
 
 # fitting a first model to see how it works
 testCountry <- glmer(data = evs_imputed, formula = techno ~ (1 | country), family = binomial("logit"))
@@ -194,9 +209,10 @@ summary(test)
 
 
 
+ggplot(data = evs_imputed) + geom_bar(aes(y = c_abrv, fill = technoBin), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
 
-
-
+evs_imputed$c_abrv <- evs2017$c_abrv
+fre(evs_imputed$c_abrv)
 
 
 

@@ -36,7 +36,7 @@ Werkkanal 9, 96047 Bamberg \textbar{}
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-  \setmainfont[]{Tahoma}
+  \setmainfont[]{Times New Roman}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -108,6 +108,20 @@ Werkkanal 9, 96047 Bamberg \textbar{}
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage[normalem]{ulem}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{calc}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage{wrapfig}
+\usepackage{adjustbox}
+\usepackage{hyperref}
 \ifXeTeX
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
   \usepackage{polyglossia}
@@ -235,26 +249,60 @@ know about and have the skills required to do so (see
 \protect\hyperlink{ref-bickerton2020technocracy}{Bickerton \& Accetti,
 2020, p. 32f}.).
 
-Another account of what can be considered technocracy has been given by
+Another aspect that describes the difference between
+democratic/representative and technocratic systems has been given by
 Robert A. Dahl in his classic `On Democracy' in the chapter `Ideal
-Democracy.' He takes a position of staunch resistance from a
-democracy-theoretical point of view, stating: \emph{``Because experts
-may be qualified to serve as your agents does not mean that they are
-qualified to serve as your rulers.''}
+Democracy.' He takes a position of staunch resistance toward
+technocratic expert government, stating: \emph{`Because experts may be
+qualified to serve as your agents does not mean that they are qualified
+to serve as your rulers.'}
 (\protect\hyperlink{ref-dahl_onDemocracy}{Dahl, 2020, p. 73}) Thereby,
 he made the exact opposite point to Plato's argument described before.
 The latter assumed the philosopher-kings (so to say, the
-proto-technocrats) to be the best possible rulers because they have a
-certain set of skills that the broad masses do not have, thus causing
-chaos when democracy is the form of governance. Dahl on the other hand
-brings forth the notion of \emph{corruption through power} --- by which
-the pursuit of the `greater good' for the whole society, which was being
-projected onto the philosopher-kings, can be undermined.
+`proto-technocrats') to be the best possible rulers because they have a
+certain set of skills that the broad masses do not have and would apply
+it to achieve the greater good for all of society --- democracy as a
+form of governance, in turn, could cause chaos. Dahl on the other hand
+brings forth the notion of \emph{corruption through power}, by which the
+pursuit of the `greater good' for the whole society can be undermined.
+\emph{Sobald Buch vorhanden, hier weiterschreiben}
 
-To further shed light on the term `technocracy,' the definition given by
-\protect\hyperlink{ref-caramani2020technocratic}{Caramani}
+To further shed light on the term `technocracy,' another definition
+given by \protect\hyperlink{ref-caramani2020technocratic}{Caramani}
 (\protect\hyperlink{ref-caramani2020technocratic}{2020}) should be
-considered. He
+considered. He considers it to be `a form of power in which decisions
+over the allocation of values are made by experts or technical elites
+based on their knowledge, independently and in the long-term interest of
+the whole of society'
+(\protect\hyperlink{ref-caramani2020technocratic}{Caramani, 2020, p.
+3}). He further adds four features making government technocratic in
+nature (\protect\hyperlink{ref-caramani2020technocratic}{Caramani, 2020,
+p. 3f}.):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The source of power is knowledge, rather than popular will (e. g.
+  through elections).
+\item
+  Political representation is realized via a „trustee model``, where
+  citizens lack the knowledge and wisdom to enter the political arena
+  themselves. Their „trustees`` (i. e. the experts) do that for them,
+  turning democracy and elections into a mere elite selection process.
+\item
+  Politics is seen by the expert elites as a means to enhance the
+  „greater good`` and acting in the common interest.
+\item
+  The common interest itself is assessed through science, rationally,
+  and as objective as possible, not by ideology or derived from
+  pluralist preference aggregation within the people.
+\end{enumerate}
+
+For this paper, it is also important to discuss how technocracy may be
+measured. When doing attitudinal research with citizens, especially
+concerning elusive and heterogenous topics like technocracy, researchers
+have to be careful --- as not every respondent understands the same
+under such complex concepts. To
 
 \hypertarget{the-road-so-far-what-has-been-found-out-about-technocracy-on-state--and-individual-level}{%
 \subsection{The road so far: what has been found out about technocracy
@@ -306,6 +354,95 @@ findings in their study about
 \hypertarget{hypotheses}{%
 \subsection{(Hypotheses?)}\label{hypotheses}}
 
+\hypertarget{individual-level-hypotheses}{%
+\subsubsection{individual level
+hypotheses}\label{individual-level-hypotheses}}
+
+\begin{itemize}
+\tightlist
+\item
+  H1: If a person sees democracy in a positive light, in turn, he/she
+  will see technocracy in a negative light.
+\item
+  H2: Technocracy is seen more negatively when trust in political
+  institutions of representative democracy is higher.
+\item
+  H3: Higher trust in the (more technocratic) EU will lead to a more
+  positive view of technocracy with citizens.
+\end{itemize}
+
+\hypertarget{country-level-hypotheses}{%
+\subsubsection{country level
+hypotheses}\label{country-level-hypotheses}}
+
+\begin{itemize}
+\tightlist
+\item
+  H4: Positive attitudes towards technocracy will occur more frequently
+  in countries with more (perceived) corruption.
+\item
+  H5: Positive attitudes towards technocracy will occur more frequently
+  in countries that are in a bad shape economically (via GDP p.~c.).
+\item
+  H6: Countries that have experienced communist-authoritarian leadership
+  in the past will show more positive attitudes towards technocracy.
+  (especially in South/Central Eastern Europe)
+\item
+  H7: Countries that have already had experience with technocratic
+  governments in the past will show more positive attitudes towards
+  technocracy (via list in McDonnell/Valbruzzi 2014)
+\end{itemize}
+
+\hypertarget{other-hypotheses}{%
+\subsubsection{other hypotheses}\label{other-hypotheses}}
+
+\begin{itemize}
+\tightlist
+\item
+  H8 (individual, Chiru \& Enyedi): People that are better educated will
+  have more positive attitudes towards expert government (i. e.
+  technocracy). ---\textgreater{} this is contrary to the stealth
+  democracy-beliefs that the uneducated favour stealth democracy over
+  representative status quo; they do not have clear findings for their 9
+  countries, so maybe test it for full EU
+\end{itemize}
+
+\hypertarget{hypotheses-with-regard-to-sciencetechnology-vs.-faithreligion}{%
+\subsubsection{hypotheses with regard to science/technology
+vs.~faith/religion}\label{hypotheses-with-regard-to-sciencetechnology-vs.-faithreligion}}
+
+\begin{itemize}
+\tightlist
+\item
+  H9: People that, generally speaking, have a high opinion of science,
+  technology, and knowledge tend to also view technocracy and government
+  by experts in a more positive light. (I would build indices from WVS
+  vars)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    reasoning: those people tend to view knowledge and expertise higher,
+    therefore I would state that they would value expertise over `mere'
+    representative party politicians when talking about implementing
+    what they consider important in areas like digitization, health
+    care, military technology, etc.
+  \end{itemize}
+\item
+  H10: People that have stronger religious beliefs/are more
+  religious/have more (religious) faith tend to view technocracy and
+  government by experts/expertise in a more negative light.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    reasoning: people that have stronger religious beliefs generally
+    tend to view science (and therefore also scientific reasoning) more
+    critically, putting an emphasis on God's intervention, therefore
+    being more critical of `governance by reason' alone
+  \end{itemize}
+\end{itemize}
+
 \hypertarget{methods-and-data}{%
 \section{Methods and data}\label{methods-and-data}}
 
@@ -316,6 +453,10 @@ utilizes data from the European Values Study (EVS).
 
 \hypertarget{analysis-and-results}{%
 \section{Analysis and results}\label{analysis-and-results}}
+
+\includegraphics{seminarPaper_files/figure-latex/technocratic attitudes in citizens by countries --- recreation of Bertsou \& Pastorella graphic with the EVS-1.pdf}
+
+\includegraphics{seminarPaper_files/figure-latex/alternative plot-1.pdf}
 
 \hypertarget{discussion-of-results-and-final-considerations}{%
 \section{Discussion of results and final
@@ -400,7 +541,8 @@ Mudde, C. (2004). The populist zeitgeist. \emph{Government and
 Opposition}, \emph{39}(4), 541--563.
 
 \leavevmode\vadjust pre{\hypertarget{ref-muxfcller2016populismus}{}}%
-Müller, J.-W. (2016). \emph{Was ist populismus? Ein essay}. Suhrkamp.
+Müller, J.-W. (2016). \emph{Was ist {Populismus}? Ein {Essay}}.
+Suhrkamp.
 
 \end{CSLReferences}
 
