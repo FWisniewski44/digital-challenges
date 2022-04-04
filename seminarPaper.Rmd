@@ -140,30 +140,57 @@ By applying these rules, they classify governments in Europe between 1945 and 20
 
 @font2015participation apply these findings in their study about 
 
-## (Hypotheses?)
+## Hypotheses to be tested in this paper
 
 <!-- + hypotheses in Bertsou/Pastorella 2017 -->
 <!-- + other Bertsou papers? -->
 <!-- + Caramani? -->
 <!-- + the Caramani/Bertsou book on technocracy 2020? -->
 
-### individual level hypotheses
-+ H1: If a person sees democracy in a positive light, in turn, he/she will see technocracy in a negative light.
-+ H2: Technocracy is seen more negatively when trust in political institutions of representative democracy is higher.
-+ H3: Higher trust in the (more technocratic) EU will lead to a more positive view of technocracy with citizens.
+Having explored both the theoretical background of technocracy as a concept (including definitions of the term) under 2.1, and also some crucial findings under 2.2, in paragraph 2.3, the hypotheses that shall be tested in this paper will be stated. Those will consist of the tried-and-tested ones in this research space, taken also from the aforementioned studies under 2.2 --- but tested with newer data. Also, to supplement scholarly work therein, two new hypotheses will be generated and theoretically justified in the course of this paragraph. All in all, a two step approach will be taken: both individual level and country level hypotheses will be formulated.
+
+### Core hypotheses on the individual level
+One of the core hypotheses having been constantly checked and updated by scholars with newer data becoming available over the years has been citizens' attitudes towards democracy as a form of governance. The reasoning behind this is as follows: citizens that generally trust democratic institutions and players and are satisified with them and the system as a whole will not be fond of technocracy as a sort-of 'contender' to it. Therefore, the first hypothesis will be:
+
+>H1: If a person sees democracy in a positive light, in turn, s/he will see technocracy in a more negative light.
+
+The next hypothesis is grounded similarly in the contrast of technocracy and democracy. As put forth by @bertsou2017technocratic, if citizens have had experiences that would diminish their trust in democracy's representative institutions (like e. g. a series of unreliable governments that made ineffective decisions when implementing policies), this could lead to them being more receptive for the ideas of experts governing --- believing in the notion that they could do it in a better way. On the contrary, citizens that have more trust in their political system of representative democracy are less likely to have a positive opinion on technocracy [see @bertsou2017technocratic, p. 434f.].
+
+> H2: Technocracy is seen more negatively when trust in political institutions of representative democracy is higher.
+
+For the third hypothesis, this paper turns to the findings of @chiru2022wants. In their study, they have taken the state-level hypothesis of @bertsou2017technocratic, but have applied it on the citizen-level. While the latter have 
+
+> H3: Technocracy is seen more positively by citizens that perceive corruption to be a major problem in the political system of their country.
+
+The fourth hypothesis will revolve around citizens' educational level. Digging into the literature about the concept of stealth democracy, 
++ theiss morse & bertsou: dumb people think it is cool
++ chiru/enyedi: other way round
++ contested, therefore again test of the chiru/enyedi hypothesis
+
+> H4: People that are better educated view technocracy in a more positive way.
+
+
+<!-- + H3: Higher trust in the (more technocratic) EU will lead to a more positive view of technocracy with citizens. (cannot be applied due to having ) -->
 
 ### country level hypotheses
-+ H4: Positive attitudes towards technocracy will occur more frequently in countries with more (perceived) corruption.
+
+
+> H4: Positive attitudes towards technocracy will occur more frequently in countries with more (perceived) corruption.
+
 + H5: Positive attitudes towards technocracy will occur more frequently in countries that are in a bad shape economically (via GDP p. c.).
+
 + H6: Countries that have experienced communist-authoritarian leadership in the past will show more positive attitudes towards technocracy. (especially in South/Central Eastern Europe)
+
 + H7: Countries that have already had experience with technocratic governments in the past will show more positive attitudes towards technocracy (via list in McDonnell/Valbruzzi 2014)
 
-### other hypotheses
+### other hypotheses, context variables
 + H8 (individual, Chiru & Enyedi): People that are better educated will have more positive attitudes towards expert government (i. e. technocracy). ---> this is contrary to the stealth democracy-beliefs that the uneducated favour stealth democracy over representative status quo; they do not have clear findings for their 9 countries, so maybe test it for full EU
 
 ### hypotheses with regard to science/technology vs. faith/religion
-+ H9: People that, generally speaking, have a high opinion of science, technology, and knowledge tend to also view technocracy and government by experts in a more positive light. (I would build indices from WVS vars)
-  + reasoning: those people tend to view knowledge and expertise higher, therefore I would state that they would value expertise over 'mere' representative party politicians when talking about implementing what they consider important in areas like digitization, health care, military technology, etc.
++ H9: People that, generally speaking, have a higher opinion of science and technology tend to also view technocracy and government by experts in a more positive light.
+  + reasoning: those people tend to view knowledge and expertise higher, therefore I would state that
+they would value expertise over 'mere' representative party politicians when talking about implementing what they consider important in areas like digitization, health care, military technology, etc.
+
 + H10: People that have stronger religious beliefs/are more religious/have more (religious) faith tend to view technocracy and government by experts/expertise in a more negative light.
   + reasoning: people that have stronger religious beliefs generally tend to view science (and therefore also scientific reasoning) more critically, putting an emphasis on God's intervention, therefore being more critical of 'governance by reason' alone
 
@@ -175,7 +202,7 @@ By applying these rules, they classify governments in Europe between 1945 and 20
 <!-- + describe the explanatory variables with regard to how they exactly operationalize the points mentioned under paragraph 2 -->
 <!-- + describe the method of choice (logistic regression? do we need to control for country effects? hierarchical models?) -->
 
-Theoretically and practically building upon @bertsou2017technocratic, this paper also utilizes data from the European Values Study (EVS).
+Theoretically and practically building upon @bertsou2017technocratic, this paper also utilizes data from the World Values Survey (EVS).
 
 # Analysis and results
 
@@ -184,7 +211,7 @@ Theoretically and practically building upon @bertsou2017technocratic, this paper
 <!-- + just description in the beginning; rest will be in discussion paragraph -->
 
 ```{r technocratic attitudes in citizens by countries --- recreation of Bertsou & Pastorella graphic with the EVS, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-ggplot(data = evs_imputed) + geom_bar(aes(y = c_abrv, fill = techno), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
+ggplot(data = wvs7_countries) + geom_bar(aes(y = country, fill = expert), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
 ```
 
 ```{r alternative plot, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
