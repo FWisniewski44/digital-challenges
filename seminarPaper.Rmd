@@ -16,6 +16,7 @@ abstract: "This paper will revolve around the topic of technocracy. Whilst it ha
 lang: "EN"
 nocite: |
     @evs2017
+    @wvsWave7
 documentclass: "article"
 geometry: "left=2.5cm,right=2.5cm,top=2cm,bottom=2cm"
 mainfont: "Times New Roman"
@@ -87,7 +88,7 @@ But populism is by far not the only 'alternative approach' to representative dem
 
 This paper seeks to take this more citizen-centered approach: the question that will be addressed is about their attitudes towards this alternative concept of government and governance. Other social scientists have very recently taken up this narrative before and have shown that there is significant homogeneity throughout Europe's people when talking about their opinions of technocracy (see e. g. @bertsou2017technocratic, @ganuza2020experts, @lavezzolo2021will, @chiru2022wants or @bertsou2022people). However, the data they used was from back in 2009; this makes it highly likely that citizens' attitudes towards technocracy may have evolved and changed over time, especially considering events after 2009 up to the origin of the newer data set in 2017, like the Brexit referendum or the aftermath of the financial crisis in Europe.
 
-Therefore, taking survey data about citizens' stances towards technocracy in European countries, the  this exploratory analysis aims at shedding more light upon the real-world implications of technocracy as a normative concept with updated data and see if previously obtained results nowadays still hold. Also, as a secondary goal, it shall be examined if there are certain patterns within the cross-national data that promise even more interesting research perspectives for the future.
+Therefore, taking survey data about citizens' stances towards technocracy in European countries,   this exploratory analysis aims at shedding more light upon the real-world implications of technocracy as a normative concept with updated data and see if previously obtained results nowadays still hold. Also, as a secondary goal, it shall be examined if there are certain patterns within the cross-national data that promise even more interesting research perspectives for the future.
 
 <!-- memo an mich: überlege mal, ob das neu zu schreiben ist, wenn man mehr greifbares in den händen hat... -->
 
@@ -150,48 +151,51 @@ By applying these rules, they classify governments in Europe between 1945 and 20
 Having explored both the theoretical background of technocracy as a concept (including definitions of the term) under 2.1, and also some crucial findings under 2.2, in paragraph 2.3, the hypotheses that shall be tested in this paper will be stated. Those will consist of the tried-and-tested ones in this research space, taken also from the aforementioned studies under 2.2 --- but tested with newer data. Also, to supplement scholarly work therein, two new hypotheses will be generated and theoretically justified in the course of this paragraph. All in all, a two step approach will be taken: both individual level and country level hypotheses will be formulated.
 
 ### Core hypotheses on the individual level
-One of the core hypotheses having been constantly checked and updated by scholars with newer data becoming available over the years has been citizens' attitudes towards democracy as a form of governance. The reasoning behind this is as follows: citizens that generally trust democratic institutions and players and are satisified with them and the system as a whole will not be fond of technocracy as a sort-of 'contender' to it. Therefore, the first hypothesis will be:
+The first of the core hypotheses having been constantly checked and updated by scholars with newer data becoming available over the years has been citizens' attitudes towards democracy as a form of governance (see e. g. @bengtsson2009direct, @coffe2014education and @bertsou2017technocratic). Those studies come from different directions, with some measuring citizens' support for stealth democracy, others for technocracy and expert government. Also, they yielded different results, as @chiru2022wants point out. This is why the hypothesis shall be tested again in the context of this paper. The reasoning behind this is follows @bertsou2017technocratic: citizens that generally trust democratic institutions and players and are satisified with them and the system as a whole will not be fond of technocracy as a sort-of 'contender' to it. Therefore, the first hypothesis will be:
 
->H1: If a person sees democracy in a positive light, in turn, s/he will see technocracy in a more negative light.
+>H1: The more satisfied people are with democracy as a political system, the less likely it becomes for them to support technocracy/expert government.
 
-The next hypothesis is grounded similarly in the contrast of technocracy and democracy. As put forth by @bertsou2017technocratic, if citizens have had experiences that would diminish their trust in democracy's representative institutions (like e. g. a series of unreliable governments that made ineffective decisions when implementing policies), this could lead to them being more receptive for the ideas of experts governing --- believing in the notion that they could do it in a better way. On the contrary, citizens that have more trust in their political system of representative democracy are less likely to have a positive opinion on technocracy [see @bertsou2017technocratic, p. 434f.].
+The next hypothesis is grounded in the contrast of technocracy and democracy regarding institutions. As put forth by @bertsou2017technocratic, if citizens have had experiences that would diminish their trust in democracy's representative institutions (like e. g. a series of unreliable governments that made ineffective decisions when implementing policies), this could lead to them being more receptive for the ideas of experts governing --- believing in the notion that they could do it in a better way. On the contrary, citizens that have more trust in their political system of representative democracy would be less likely to have a positive opinion on technocracy [see @bertsou2017technocratic, p. 434f.].
+Another important criticism of democratic decision-making by technocratically minded citizens is highlighted by @bertsou2022people, where it is stated that the lower trust of those people comes from their perceived ineffectivity and irresponsibility with democratic decision-making and -makers. This paper therefore tests the following as a second hypothesis:
 
-> H2: Technocracy is seen more negatively when trust in political institutions of representative democracy is higher.
+> H2: Technocracy and expert government is seen more negatively when trust in political institutions of representative democracy is higher.
 
-For the third hypothesis, this paper turns to the findings of @chiru2022wants. In their study, they have taken the state-level hypothesis of @bertsou2017technocratic, but have applied it on the citizen-level. While the latter have 
+As already pointed out by @bengtsson2009direct as part of the research on stealth democracy, it has been found out that more right-wing oriented people favour more expert decision-making over democratic forms of government [@bengtsson2009direct, p. 1045].
+On the other end of this spatial political spectrum, @donovan2006popular found out that with left-wing oriented citizens, it is quite the contrary: in some countries, those people were more likely than political 'moderates' to favour the use of popular referendums, thus they would prefer more direct citizen intervention in politics than right-wing oriented people [@donovan2006popular, p. 681, p. 684].
+Previously, this reasoning has been empirically proven by e. g. @bertsou2017technocratic or @bertsou2022people and also partially by @chiru2022wants.
+From that background, to see if this will also hold in the context of this paper and to further empirically contest the reasoning behind it, the third hypothesis reads as follows:
 
-> H3: Technocracy is seen more positively by citizens that perceive corruption to be a major problem in the political system of their country.
+> H3: The further on the ideological/political right citizens perceive themselves to be, the more likely it is for them to support technocracy/expert government.
 
-The fourth hypothesis will revolve around citizens' educational level. Digging into the literature about the concept of stealth democracy, 
+For the fourth hypothesis, this paper turns again to the findings of @chiru2022wants. In their study, they have taken the state-level hypothesis of @bertsou2017technocratic, but have applied it on the citizen-level. They justified this by stating that there were other factors that, for corruption perception, had interaction effects on the country-level, therefore making a citizen-level necessary. As also shown by @chiru2012voter and @ecker2016corruption, incumbent governments, parties, and politicians may well be held accountable for their corruption, if perceived by citizens --- yet again, on the other hand, it has also been discussed that there is a possibility for them to remain in power regardless, if there is no really viable alternative for voters (see @charron2016ideology or @hooghe2011distrusting). If punished or not, nevertheless, corruption and citizens perceiving it can contribute to them losing faith in their current political system (@ziller2015pure), which is why this paper hypothesizes:
+
+> H4: Technocracy is seen more positively by citizens that perceive corruption to be a major problem in the political system of their country.
+
+The fourth hypothesis will revolve around citizens' educational level. Starting off from 
+
 + theiss morse & bertsou: dumb people think it is cool
-+ chiru/enyedi: other way round
++ chiru/enyedi: other way round has been shown
++ bertsou2022people: technocratic minded people are expected to be of higher education, skilled, a knowledge elite
 + contested, therefore again test of the chiru/enyedi hypothesis
++ Chiru & Enyedi: People that are better educated will have more positive attitudes towards expert government (i. e. technocracy). ---> this is contrary to the stealth democracy-beliefs that the uneducated favour stealth democracy over representative status quo; they do not have clear findings for their 9 countries, so maybe test it for full EU
++ maybe also consider that better education means that they themselves are experts? who determines who is an expert? bickerton & accetti!
 
-> H4: People that are better educated view technocracy in a more positive way.
-
-
-<!-- + H3: Higher trust in the (more technocratic) EU will lead to a more positive view of technocracy with citizens. (cannot be applied due to having ) -->
-
-### country level hypotheses
+> H5: Citizens that are better educated, have more social capital, and have more income view technocracy in a more positive way.
 
 
-> H4: Positive attitudes towards technocracy will occur more frequently in countries with more (perceived) corruption.
 
-+ H5: Positive attitudes towards technocracy will occur more frequently in countries that are in a bad shape economically (via GDP p. c.).
+<!-- + H5: Positive attitudes towards technocracy will occur more frequently in countries that are in a bad shape economically (via GDP p. c.). -->
 
-+ H6: Countries that have experienced communist-authoritarian leadership in the past will show more positive attitudes towards technocracy. (especially in South/Central Eastern Europe)
+<!-- + H6: Countries that have experienced communist-authoritarian leadership in the past will show more positive attitudes towards technocracy. (especially in South/Central Eastern Europe) -->
 
-+ H7: Countries that have already had experience with technocratic governments in the past will show more positive attitudes towards technocracy (via list in McDonnell/Valbruzzi 2014)
+<!-- + H7: Countries that have already had experience with technocratic governments in the past will show more positive attitudes towards technocracy (via list in McDonnell/Valbruzzi 2014) -->
 
-### other hypotheses, context variables
-+ H8 (individual, Chiru & Enyedi): People that are better educated will have more positive attitudes towards expert government (i. e. technocracy). ---> this is contrary to the stealth democracy-beliefs that the uneducated favour stealth democracy over representative status quo; they do not have clear findings for their 9 countries, so maybe test it for full EU
-
-### hypotheses with regard to science/technology vs. faith/religion
-+ H9: People that, generally speaking, have a higher opinion of science and technology tend to also view technocracy and government by experts in a more positive light.
+### New hypotheses with regard to science/technology vs. faith/religion
++ H6: People that, generally speaking, have a higher opinion of science and technology tend to also view technocracy and government by experts in a more positive light.
   + reasoning: those people tend to view knowledge and expertise higher, therefore I would state that
 they would value expertise over 'mere' representative party politicians when talking about implementing what they consider important in areas like digitization, health care, military technology, etc.
 
-+ H10: People that have stronger religious beliefs/are more religious/have more (religious) faith tend to view technocracy and government by experts/expertise in a more negative light.
++ H7: People that have stronger religious beliefs/are more religious/have more (religious) faith tend to view technocracy and government by experts/expertise in a more negative light.
   + reasoning: people that have stronger religious beliefs generally tend to view science (and therefore also scientific reasoning) more critically, putting an emphasis on God's intervention, therefore being more critical of 'governance by reason' alone
 
 
@@ -202,7 +206,26 @@ they would value expertise over 'mere' representative party politicians when tal
 <!-- + describe the explanatory variables with regard to how they exactly operationalize the points mentioned under paragraph 2 -->
 <!-- + describe the method of choice (logistic regression? do we need to control for country effects? hierarchical models?) -->
 
-Theoretically and practically building upon @bertsou2017technocratic, this paper also utilizes data from the World Values Survey (EVS).
+## Data and caveats
+This paper utilizes data from the World Values Survey (WVS), which closely resembles the European Values Study (EVS), also used by e. g. @bertsou2017technocratic in their seminal study on citizens' technocratic attitudes, but with two differences that have to be mentioned.
+First, it contains more countries from all over the world, but less from Europe and the EU itself, which impacts the cases selected for this study a bit.
+But it also contains, secondly, a lot more variables and also implements data from different sources like e. g. the World Bank's GDP per capita or the 'Varieties of Democracy' (V-Dem) project that measures democracy in all forms thinkable. So, while variable availability is generally speaking better within the WVS, the country selection (if one wishes to concentrate only on Europe) is better with the EVS.
+
+## Case selection of the paper
+The countries selected for this paper include Germany, Greece, Romania, Brazil, and Argentina and were selected according to (1) data availability and (2) following the argumentation of @chiru2022wants. They also chose those countries, pointing to different experiences with democratic systems, but also different regime types with different degrees of corruption, and different backgrounds with technocracy, technocratic decision-making, and expert government --- therefore providing for a high degree of variation between the cases. Due to data availability, compared to @chiru2022wants, the Netherlands, the UK, Switzerland and Hungary had to be dropped, leaving the countries mentioned above to be researched.
+
+## Data set selection
+It has been furthermore chosen to work with the WVS to test the novel hypotheses H6 and H7 about citizens' attitude towards technocracy and how they are influenced by their stance on scientific and technological matters.
+The WVS is a 
+
++ also include reason to work with WVS and not EVS
++ describe both, and why they make fitting data sets
++ describe WVS in more detail than EVS
+
+## Variables included and operationalization of concepts with the WVS
+
+
+## Method: individual country-wise binary logistic regressions
 
 # Analysis and results
 
@@ -210,22 +233,26 @@ Theoretically and practically building upon @bertsou2017technocratic, this paper
 <!-- + graphics and regression tables -->
 <!-- + just description in the beginning; rest will be in discussion paragraph -->
 
+## Univariate analysis: taking a look at the variable 'expert' for technocratic attitudes
 ```{r technocratic attitudes in citizens by countries --- recreation of Bertsou & Pastorella graphic with the EVS, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-ggplot(data = wvs7_countries) + geom_bar(aes(y = country, fill = expert), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
+# ggplot(data = wvs7_countries) + geom_bar(aes(y = country, fill = expert), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
 ```
 
 ```{r alternative plot, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-ggplot(data = evs_imputed) + geom_bar(aes(y = c_abrv, fill = technoBin), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
+# ggplot(data = evs_imputed) + geom_bar(aes(y = c_abrv, fill = technoBin), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
 ```
+
+## Multivariate analysis: regression models per country
+This paper applies a similar strategy to modeling the effects of the variables as @chiru2022wants, as it also selected identical cases as much as possible from the data available.
 
 
 # Discussion of results and final considerations
 
 <!-- + discuss what we found out -->
 <!-- + discuss what that means with regard to especially Bertsou/Pastorella's findings from 2017 with the old data -->
-<!-- + discuss if there are any implications about what should be examined more closely in the future (if any?) -->
-<!--   + I do expect greece, italy to show some interesting values -->
-<!--   + Jungherr mentioned portugal, so watch out for that too -->
+<!-- + discuss if there are any implications about what should be examined more closely in the future: ESPECIALLY WITH BETTER DATA AVAILABILITY! -->
+
+It is clear that those novel hypotheses are tested in a rather small space here, thus making it a desideratum to expand it as soon as more data may be available in the future.
 
 \newpage{}
 
