@@ -5,6 +5,8 @@ library(memisc)
 library(pander)
 library(tidyverse)
 library(tidymodels)
+library(easystats)
+library(parameters)
 library(readr)
 library(MASS)
 library(lme4)
@@ -25,6 +27,9 @@ library(distill)
 library(expss)
 library(rockchalk)
 library(epiDisplay)
+library(sjmisc)
+library(sjPlot)
+library(report)
 
 load(file = "/Users/flo/Downloads/WVS_Cross-National_Wave_7_Rdata_v3_0.rdata")
 wvs7 <- `WVS_Cross-National_Wave_7_R_v3_0`
@@ -307,7 +312,7 @@ fre(wvs7_countries$country)
 
 wvs7Chiru <- wvs7Subset %>% dplyr::filter(country %in% c("NLD", "DEU", "GBR", "CHE", "GRC", "HUN", "ROU",
                                                                  "BRA", "ARG"))
-fre(wvs7Chiru$country) ## not included bc. of data availability: NL, UK, CH
+fre(wvs7Chiru$country) ## not included bc. of data availability: NL, UK, CH, HUN
 
 ############# dichotomization of dependent variable "expert" for technocracy attitudes
 wvs7Chiru$expert_bin <- combineLevels(wvs7Chiru$expert, levs = c("1", "2"), newLabel = "1")
@@ -315,6 +320,8 @@ wvs7Chiru$expert_bin <- combineLevels(wvs7Chiru$expert_bin, levs = c("3", "4"), 
 fre(wvs7Chiru$expert)
 fre(wvs7Chiru$expert_bin)
 levels(wvs7Chiru$expert_bin)
+
+save(wvs7Chiru, file = "wvs7Chiru.RData")
 
 ## data set 1: Germany
 wvs7GER <- wvs7Chiru %>% dplyr::filter(country %in% c("DEU"))
@@ -343,9 +350,9 @@ wvs7ARG <- wvs7Chiru %>% dplyr::filter(country %in% c("ARG"))
 modGER <- glm(data = wvs7GER, formula = expert_bin ~ lrScale + corrPerc + polInt + polTrust +
                 satDem + age + educ + incc + socCap + sciAtt,
               family = "binomial")
-summary(glm(data = wvs7GER, formula = expert_bin~attDem, family = "binomial"))
-
-summary(modGER)
+# summary(glm(data = wvs7GER, formula = expert_bin~attDem, family = "binomial"))
+# 
+# summary(modGER)
 
 modGRC <- glm(data = wvs7GRC, formula = expert_bin ~ lrScale + corrPerc + polInt + polTrust +
                 satDem + age + educ + incc + socCap + sciAtt,
@@ -362,12 +369,14 @@ modROU <- glm(data = wvs7ROU, formula = expert_bin ~ lrScale + corrPerc + polInt
 modBRA <- glm(data = wvs7BRA, formula = expert_bin ~ lrScale + corrPerc + polInt + polTrust +
                 satDem + age + educ + incc + socCap + sciAtt,
               family = "binomial")
+summary(modBRA)
 
 modARG <- glm(data = wvs7ARG, formula = expert_bin ~ lrScale +corrPerc + polInt + polTrust +
                 satDem + age + educ + incc + socCap + sciAtt,
               family = "binomial")
-summary(modARG)
+# summary(modARG)
 
+## test for displaying results:
 ## make a combined markdown table of all models with memisc and pander
 combTable <- mtable('Germany' = modGER,
                     'Greece' = modGRC,
@@ -379,28 +388,46 @@ combTable <- mtable('Germany' = modGER,
 library(sjPlot)
 
 
+### tab of models, log odds displayed
 tab_model(modGER, modGRC, modROU, modBRA, modARG, p.style = "numeric_stars",
           title = "Log-odds: Regression models for Germany, Greece, Romania, Brazil, and Argentina",
           dv.labels = c("Germany", "Greece", "Romania", "Brazil", "Argentina"),
           transform = NULL,
           file = "output_LO.html")
 
+## tab of models, odds ratios displayed
 tab_model(modGER, modGRC, modROU, modBRA, modARG, p.style = "numeric_stars",
                      title = "Odds ratios: Regression models for Germany, Greece, Romania, Brazil, and Argentina",
                      dv.labels = c("Germany", "Greece", "Romania", "Brazil", "Argentina"),
                     file = "output_OR.html")
 
+## graphical/visual models
+### all in one
+plot_models(modGER, modGRC, modROU, modBRA, modARG, show.p = T)
+print_md(parameters(modGER))
 
+### univariate display of variables (especially for technocracy attitudes!)
+#### recode expert variable so it has value labels
+wvs7Chiru$expert_lab <- factor(wvs7Chiru$expert, levels = c(1, 2, 3, 4), labels = c("Very good", "Fairly good", "Fairly Bad", "Very bad"))
+freq(wvs7Chiru$expert_lab)
 
+sjPlot::plot_frq(wvs7Chiru$expert)
+sjPlot::plot_frq(wvs7Chiru$expert_bin)
 
+## testing the report package
+report(modGER)
 
 
 
 
 fre(wvs7GER$satDem)
 
+wvs7Chiru$country_re <- factor(wvs7Chiru$country, levels = c("ROU", "BRA", "ARG", "DEU", "GRC"))
+fre(wvs7Chiru$country_re)
 
+save(wvs7Chiru, file = "wvs7Chiru.RData")
 
-
-
+ggplot(data = wvs7Chiru) + 
+  geom_bar(aes(y = country_re, fill = expert_bin), show.legend = T, position = "fill") + 
+  ylab(label = "Countries") + xlab("Percentages for citizens' attitudes towards technocracy per country")
 

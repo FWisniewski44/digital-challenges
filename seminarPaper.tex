@@ -68,6 +68,46 @@ Werkkanal 9, 96047 Bamberg \textbar{}
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -492,39 +532,54 @@ country.
 \end{quote}
 
 The fourth hypothesis will revolve around citizens' educational level.
-Starting off from
-
-\begin{itemize}
-\tightlist
-\item
-  theiss morse \& bertsou: dumb people think it is cool
-\item
-  chiru/enyedi: other way round has been shown
-\item
-  bertsou2022people: technocratic minded people are expected to be of
-  higher education, skilled, a knowledge elite
-\item
-  contested, therefore again test of the chiru/enyedi hypothesis
-\item
-  Chiru \& Enyedi: People that are better educated will have more
-  positive attitudes towards expert government (i. e. technocracy).
-  ---\textgreater{} this is contrary to the stealth democracy-beliefs
-  that the uneducated favour stealth democracy over representative
-  status quo; they do not have clear findings for their 9 countries, so
-  maybe test it for full EU
-\item
-  maybe also consider that better education means that they themselves
-  are experts? who determines who is an expert? bickerton \& accetti!
-\end{itemize}
+Starting off from the stealth democracy literature once again, we first
+visit \protect\hyperlink{ref-hibbing2002stealth}{Hibbing \&
+Theiss-Morse} (\protect\hyperlink{ref-hibbing2002stealth}{2002}) with
+their seminal contribution in this area. Regarding citizens educational
+background, they provided two alternative hypotheses: one relying on
+\emph{cognitive mobilization theory} (better education meaning more
+favourable views of direct citizen involvement in politics through
+direct democracy) and the other on \emph{political dissatisfaction
+theory} (better education meaning less favourable views of direct
+citizen involvement through direct democracy)
+(\protect\hyperlink{ref-hibbing2002stealth}{Hibbing \& Theiss-Morse,
+2002, pp. 3--4}), finding evidence in favour of the \emph{political
+dissatisfaction theory}-hypothesis
+(\protect\hyperlink{ref-hibbing2002stealth}{Hibbing \& Theiss-Morse,
+2002, p. 6}). On the other hand,
+\protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
+(\protect\hyperlink{ref-chiru2022wants}{2022}) point out that the
+findings in this area have also been contested and a bit contradictory
+when taking a look at their more recent study. They refer to e. g.
+\protect\hyperlink{ref-bengtsson2009direct}{Bengtsson \& Mattila}
+(\protect\hyperlink{ref-bengtsson2009direct}{2009}) that found that
+people with higher education tended to have lower support for both
+direct and stealth democracy than those with lower education. They
+themselves found a contrary effect: people with higher education show
+favourable attitudes towards technocracy more often
+(\protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi, 2022, p. 109}).
+This is also somewhat supported by
+\protect\hyperlink{ref-bertsou2022people}{Bertsou \& Caramani}
+(\protect\hyperlink{ref-bertsou2022people}{2022}), as they state:
+`technocratic-minded citizens are expected to be highly educated, given
+the emphasis placed on the superior skills of a knowledge elite and the
+scientific approach to politics'
+(\protect\hyperlink{ref-bertsou2022people}{Bertsou \& Caramani, 2022, p.
+9}). Therefore, to further shed light on the relation of educational
+level with technocratic attitudes and to also test the claims made by
+\protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
+(\protect\hyperlink{ref-chiru2022wants}{2022}) about people with more
+social capital and higher income levels favouring technocratic expert
+government, the fifth hypothesis reads:
 
 \begin{quote}
 H5: Citizens that are better educated, have more social capital, and
 have more income view technocracy in a more positive way.
 \end{quote}
 
-\hypertarget{new-hypotheses-with-regard-to-sciencetechnology-vs.-faithreligion}{%
-\subsubsection{New hypotheses with regard to science/technology
-vs.~faith/religion}\label{new-hypotheses-with-regard-to-sciencetechnology-vs.-faithreligion}}
+\hypertarget{new-hypotheses-with-regard-to-citizens-views-on-sciencetechnology}{%
+\subsubsection{New hypotheses with regard to citizens' views on
+science/technology}\label{new-hypotheses-with-regard-to-citizens-views-on-sciencetechnology}}
 
 \begin{itemize}
 \tightlist
@@ -583,24 +638,38 @@ better with the EVS.
 paper}\label{case-selection-of-the-paper}}
 
 The countries selected for this paper include Germany, Greece, Romania,
-Brazil, and Argentina and were selected according to (1) data
-availability and (2) following the argumentation of
+Brazil, and Argentina. Reasons for choosing them are twofold: (1)
+because of data availability and (2) following the argumentation of
 \protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
 (\protect\hyperlink{ref-chiru2022wants}{2022}). They also chose those
-countries, pointing to different experiences with democratic systems,
-but also different regime types with different degrees of corruption,
-and different backgrounds with technocracy, technocratic
-decision-making, and expert government --- therefore providing for a
-high degree of variation between the cases. Due to data availability,
-compared to \protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
+countries (among others), pointing to different experiences with
+democratic systems, but also different regime types with different
+degrees of corruption, and different backgrounds with technocracy,
+technocratic decision-making, and expert government --- therefore
+providing for a high degree of variation between the cases, and by that,
+a good means of testing hypotheses. Due to data availability, compared
+to \protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
 (\protect\hyperlink{ref-chiru2022wants}{2022}), the Netherlands, the UK,
 Switzerland and Hungary had to be dropped, leaving the countries
 mentioned above to be researched.
 
-It has been furthermore chosen to work with the WVS to test the novel
+\hypertarget{data-set-selection}{%
+\subsection{Data set selection}\label{data-set-selection}}
+
+It has furthermore been chosen to work with the WVS to test the novel
 hypotheses H6 and H7 about citizens' attitude towards technocracy and
 how they are influenced by their stance on scientific and technological
 matters. The WVS is a
+
+\begin{itemize}
+\tightlist
+\item
+  also include reason to work with WVS and not EVS
+\item
+  describe both, and why they make fitting data sets
+\item
+  describe WVS in more detail than EVS
+\end{itemize}
 
 \hypertarget{variables-included-and-operationalization-of-concepts-with-the-wvs}{%
 \subsection{Variables included and operationalization of concepts with
@@ -619,6 +688,17 @@ regressions}\label{method-individual-country-wise-binary-logistic-regressions}}
 for technocratic
 attitudes}\label{univariate-analysis-taking-a-look-at-the-variable-expert-for-technocratic-attitudes}}
 
+\begin{verbatim}
+## NULL
+\end{verbatim}
+
+\includegraphics{seminarPaper_files/figure-latex/unnamed-chunk-1-1.pdf}
+\includegraphics{seminarPaper_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\includegraphics{seminarPaper_files/figure-latex/technocratic attitudes in citizens by countries --- recreation of Bertsou \& Pastorella graphic with the EVS-1.pdf}
+
+\includegraphics{seminarPaper_files/figure-latex/alternative plot-1.pdf}
+
 \hypertarget{multivariate-analysis-regression-models-per-country}{%
 \subsection{Multivariate analysis: regression models per
 country}\label{multivariate-analysis-regression-models-per-country}}
@@ -627,6 +707,988 @@ This paper applies a similar strategy to modeling the effects of the
 variables as \protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
 (\protect\hyperlink{ref-chiru2022wants}{2022}), as it also selected
 identical cases as much as possible from the data available.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# regression models (testing here before inclusion into paper)}
+
+\CommentTok{\# modAll \textless{}{-} glm(data = wvs7Chiru, formula = expert\_bin \textasciitilde{} lrScale + polInt + polTrust +}
+\CommentTok{\#               sex + age + educ + incc + socCap + sciAtt,}
+\CommentTok{\#             family = "binomial")}
+
+\NormalTok{modGER }\OtherTok{\textless{}{-}} \FunctionTok{glm}\NormalTok{(}\AttributeTok{data =}\NormalTok{ wvs7GER, }\AttributeTok{formula =}\NormalTok{ expert\_bin }\SpecialCharTok{\textasciitilde{}}\NormalTok{ lrScale }\SpecialCharTok{+}\NormalTok{ corrPerc }\SpecialCharTok{+}\NormalTok{ polInt }\SpecialCharTok{+}\NormalTok{ polTrust }\SpecialCharTok{+}
+\NormalTok{                satDem }\SpecialCharTok{+}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}\NormalTok{ incc }\SpecialCharTok{+}\NormalTok{ socCap }\SpecialCharTok{+}\NormalTok{ sciAtt, }\AttributeTok{family =} \StringTok{"binomial"}\NormalTok{)}
+
+\NormalTok{modGRC }\OtherTok{\textless{}{-}} \FunctionTok{glm}\NormalTok{(}\AttributeTok{data =}\NormalTok{ wvs7GRC, }\AttributeTok{formula =}\NormalTok{ expert\_bin }\SpecialCharTok{\textasciitilde{}}\NormalTok{ lrScale }\SpecialCharTok{+}\NormalTok{ corrPerc }\SpecialCharTok{+}\NormalTok{ polInt }\SpecialCharTok{+}\NormalTok{ polTrust }\SpecialCharTok{+}
+\NormalTok{                satDem }\SpecialCharTok{+}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}\NormalTok{ incc }\SpecialCharTok{+}\NormalTok{ socCap }\SpecialCharTok{+}\NormalTok{ sciAtt, }\AttributeTok{family =} \StringTok{"binomial"}\NormalTok{)}
+
+\NormalTok{modROU }\OtherTok{\textless{}{-}} \FunctionTok{glm}\NormalTok{(}\AttributeTok{data =}\NormalTok{ wvs7ROU, }\AttributeTok{formula =}\NormalTok{ expert\_bin }\SpecialCharTok{\textasciitilde{}}\NormalTok{ lrScale }\SpecialCharTok{+}\NormalTok{ corrPerc }\SpecialCharTok{+}\NormalTok{ polInt }\SpecialCharTok{+}\NormalTok{ polTrust }\SpecialCharTok{+}
+\NormalTok{                satDem }\SpecialCharTok{+}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}\NormalTok{ incc }\SpecialCharTok{+}\NormalTok{ socCap }\SpecialCharTok{+}\NormalTok{ sciAtt, }\AttributeTok{family =} \StringTok{"binomial"}\NormalTok{)}
+
+\NormalTok{modBRA }\OtherTok{\textless{}{-}} \FunctionTok{glm}\NormalTok{(}\AttributeTok{data =}\NormalTok{ wvs7BRA, }\AttributeTok{formula =}\NormalTok{ expert\_bin }\SpecialCharTok{\textasciitilde{}}\NormalTok{ lrScale }\SpecialCharTok{+}\NormalTok{ corrPerc }\SpecialCharTok{+}\NormalTok{ polInt }\SpecialCharTok{+}\NormalTok{ polTrust }\SpecialCharTok{+}
+\NormalTok{                satDem }\SpecialCharTok{+}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}\NormalTok{ incc }\SpecialCharTok{+}\NormalTok{ socCap }\SpecialCharTok{+}\NormalTok{ sciAtt, }\AttributeTok{family =} \StringTok{"binomial"}\NormalTok{)}
+
+\NormalTok{modARG }\OtherTok{\textless{}{-}} \FunctionTok{glm}\NormalTok{(}\AttributeTok{data =}\NormalTok{ wvs7ARG, }\AttributeTok{formula =}\NormalTok{ expert\_bin }\SpecialCharTok{\textasciitilde{}}\NormalTok{ lrScale }\SpecialCharTok{+}\NormalTok{corrPerc }\SpecialCharTok{+}\NormalTok{ polInt }\SpecialCharTok{+}\NormalTok{ polTrust }\SpecialCharTok{+}
+\NormalTok{                satDem }\SpecialCharTok{+}\NormalTok{ age }\SpecialCharTok{+}\NormalTok{ educ }\SpecialCharTok{+}\NormalTok{ incc }\SpecialCharTok{+}\NormalTok{ socCap }\SpecialCharTok{+}\NormalTok{ sciAtt, }\AttributeTok{family =} \StringTok{"binomial"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# tab of models, log odds displayed (for effect direction)}
+\FunctionTok{tab\_model}\NormalTok{(modGER, modGRC, modROU, modBRA, modARG, }\AttributeTok{p.style =} \StringTok{"numeric\_stars"}\NormalTok{,}
+          \AttributeTok{title =} \StringTok{"Log{-}odds: Regression models for Germany, Greece, Romania, Brazil, and Argentina"}\NormalTok{,}
+          \AttributeTok{dv.labels =} \FunctionTok{c}\NormalTok{(}\StringTok{"Germany"}\NormalTok{, }\StringTok{"Greece"}\NormalTok{, }\StringTok{"Romania"}\NormalTok{, }\StringTok{"Brazil"}\NormalTok{, }\StringTok{"Argentina"}\NormalTok{),}
+          \AttributeTok{transform =} \ConstantTok{NULL}\NormalTok{,}
+          \AttributeTok{file =} \StringTok{"output\_LO.html"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Log-odds: Regression models for Germany, Greece, Romania, Brazil, and
+Argentina
+
+~
+
+Germany
+
+Greece
+
+Romania
+
+Brazil
+
+Argentina
+
+Predictors
+
+Log-Odds
+
+CI
+
+p
+
+Log-Odds
+
+CI
+
+p
+
+Log-Odds
+
+CI
+
+p
+
+Log-Odds
+
+CI
+
+p
+
+Log-Odds
+
+CI
+
+p
+
+(Intercept)
+
+0.98
+
+-0.03~--~2.00
+
+0.057
+
+2.12 **
+
+0.62~--~3.65
+
+0.006
+
+-2.96 ***
+
+-4.52~--~-1.46
+
+\textless0.001
+
+-0.07
+
+-1.36~--~1.19
+
+0.911
+
+-0.22
+
+-1.47~--~1.01
+
+0.727
+
+Self-Ascribed Position onLeft-Right-Scale
+
+-0.03
+
+-0.08~--~0.03
+
+0.313
+
+0.04
+
+-0.01~--~0.08
+
+0.096
+
+-0.01
+
+-0.06~--~0.03
+
+0.564
+
+0.00
+
+-0.03~--~0.04
+
+0.836
+
+0.01
+
+-0.03~--~0.06
+
+0.584
+
+Perception of Corruptionin Respondents'RespectiveCountry
+
+-0.04
+
+-0.09~--~0.01
+
+0.140
+
+-0.04
+
+-0.14~--~0.04
+
+0.327
+
+0.05
+
+-0.04~--~0.14
+
+0.302
+
+-0.05
+
+-0.14~--~0.04
+
+0.256
+
+0.04
+
+-0.04~--~0.13
+
+0.344
+
+Political Interest
+
+-0.29 ***
+
+-0.44~--~-0.14
+
+\textless0.001
+
+0.02
+
+-0.16~--~0.19
+
+0.859
+
+0.20
+
+0.00~--~0.40
+
+0.052
+
+0.01
+
+-0.13~--~0.15
+
+0.943
+
+-0.24 **
+
+-0.39~--~-0.10
+
+0.001
+
+Political Trust
+
+0.06
+
+-0.01~--~0.13
+
+0.103
+
+0.05
+
+-0.04~--~0.14
+
+0.266
+
+-0.11 *
+
+-0.21~--~-0.01
+
+0.035
+
+0.03
+
+-0.04~--~0.10
+
+0.432
+
+-0.02
+
+-0.10~--~0.07
+
+0.721
+
+Satisfaction withDemocracy per Respondent
+
+0.10 ***
+
+0.04~--~0.16
+
+0.001
+
+0.11 **
+
+0.04~--~0.18
+
+0.002
+
+0.04
+
+-0.03~--~0.11
+
+0.262
+
+-0.00
+
+-0.07~--~0.06
+
+0.915
+
+0.00
+
+-0.06~--~0.06
+
+1.000
+
+Respondents'Age
+
+0.00
+
+-0.01~--~0.01
+
+0.991
+
+-0.01
+
+-0.02~--~0.00
+
+0.118
+
+-0.00
+
+-0.01~--~0.01
+
+0.828
+
+-0.01
+
+-0.02~--~0.00
+
+0.111
+
+0.00
+
+-0.01~--~0.01
+
+0.475
+
+educ: educ 2
+
+-0.05
+
+-0.44~--~0.33
+
+0.786
+
+0.01
+
+-0.41~--~0.42
+
+0.959
+
+0.66 **
+
+0.20~--~1.16
+
+0.007
+
+-0.30
+
+-0.63~--~0.03
+
+0.079
+
+0.24
+
+-0.09~--~0.58
+
+0.153
+
+educ: educ 3
+
+0.01
+
+-0.41~--~0.42
+
+0.973
+
+-0.36
+
+-0.80~--~0.08
+
+0.108
+
+0.93 **
+
+0.37~--~1.50
+
+0.001
+
+-0.38
+
+-0.83~--~0.06
+
+0.093
+
+0.24
+
+-0.19~--~0.67
+
+0.270
+
+incc
+
+-0.09
+
+-0.26~--~0.08
+
+0.298
+
+-0.03
+
+-0.24~--~0.17
+
+0.790
+
+0.20
+
+-0.02~--~0.44
+
+0.088
+
+-0.08
+
+-0.25~--~0.09
+
+0.347
+
+0.05
+
+-0.10~--~0.20
+
+0.538
+
+Social Capital
+
+0.11 *
+
+0.00~--~0.21
+
+0.045
+
+-0.31 ***
+
+-0.49~--~-0.14
+
+\textless0.001
+
+-0.13
+
+-0.33~--~0.04
+
+0.156
+
+0.02
+
+-0.15~--~0.19
+
+0.775
+
+0.10
+
+-0.03~--~0.23
+
+0.129
+
+Attitudes towardsScience\&Technology
+
+-0.08 *
+
+-0.15~--~-0.02
+
+0.015
+
+-0.04
+
+-0.14~--~0.05
+
+0.412
+
+-0.02
+
+-0.09~--~0.06
+
+0.640
+
+-0.07 *
+
+-0.12~--~-0.01
+
+0.023
+
+-0.04
+
+-0.11~--~0.03
+
+0.249
+
+Observations
+
+1345
+
+1054
+
+991
+
+1319
+
+812
+
+R2 Tjur
+
+0.052
+
+0.039
+
+0.033
+
+0.012
+
+0.025
+
+\begin{itemize}
+\tightlist
+\item
+  p\textless0.05~~~** p\textless0.01~~~*** p\textless0.001
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{includeHTML}\NormalTok{(}\StringTok{"output\_LO.html"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# tab of models, odds ratios displayed (for effect strength)}
+\FunctionTok{tab\_model}\NormalTok{(modGER, modGRC, modROU, modBRA, modARG, }\AttributeTok{p.style =} \StringTok{"numeric\_stars"}\NormalTok{,}
+                     \AttributeTok{title =} \StringTok{"Odds ratios: Regression models for Germany, Greece, Romania, Brazil, and Argentina"}\NormalTok{,}
+                     \AttributeTok{dv.labels =} \FunctionTok{c}\NormalTok{(}\StringTok{"Germany"}\NormalTok{, }\StringTok{"Greece"}\NormalTok{, }\StringTok{"Romania"}\NormalTok{, }\StringTok{"Brazil"}\NormalTok{, }\StringTok{"Argentina"}\NormalTok{),}
+                    \AttributeTok{file =} \StringTok{"output\_OR.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Odds ratios: Regression models for Germany, Greece, Romania, Brazil, and
+Argentina
+
+~
+
+Germany
+
+Greece
+
+Romania
+
+Brazil
+
+Argentina
+
+Predictors
+
+Odds Ratios
+
+CI
+
+p
+
+Odds Ratios
+
+CI
+
+p
+
+Odds Ratios
+
+CI
+
+p
+
+Odds Ratios
+
+CI
+
+p
+
+Odds Ratios
+
+CI
+
+p
+
+(Intercept)
+
+2.67
+
+0.97~--~7.36
+
+0.057
+
+8.35 **
+
+1.86~--~38.59
+
+0.006
+
+0.05 ***
+
+0.01~--~0.23
+
+\textless0.001
+
+0.93
+
+0.26~--~3.27
+
+0.911
+
+0.80
+
+0.23~--~2.75
+
+0.727
+
+Self-Ascribed Position onLeft-Right-Scale
+
+0.97
+
+0.92~--~1.03
+
+0.313
+
+1.04
+
+0.99~--~1.09
+
+0.096
+
+0.99
+
+0.94~--~1.03
+
+0.564
+
+1.00
+
+0.97~--~1.04
+
+0.836
+
+1.01
+
+0.97~--~1.06
+
+0.584
+
+Perception of Corruptionin Respondents'RespectiveCountry
+
+0.96
+
+0.91~--~1.01
+
+0.140
+
+0.96
+
+0.87~--~1.04
+
+0.327
+
+1.05
+
+0.96~--~1.15
+
+0.302
+
+0.95
+
+0.87~--~1.04
+
+0.256
+
+1.04
+
+0.96~--~1.14
+
+0.344
+
+Political Interest
+
+0.75 ***
+
+0.64~--~0.87
+
+\textless0.001
+
+1.02
+
+0.85~--~1.21
+
+0.859
+
+1.22
+
+1.00~--~1.49
+
+0.052
+
+1.01
+
+0.88~--~1.16
+
+0.943
+
+0.79 **
+
+0.68~--~0.91
+
+0.001
+
+Political Trust
+
+1.06
+
+0.99~--~1.14
+
+0.103
+
+1.05
+
+0.96~--~1.15
+
+0.266
+
+0.90 *
+
+0.81~--~0.99
+
+0.035
+
+1.03
+
+0.96~--~1.10
+
+0.432
+
+0.98
+
+0.90~--~1.07
+
+0.721
+
+Satisfaction withDemocracy per Respondent
+
+1.11 ***
+
+1.04~--~1.17
+
+0.001
+
+1.12 **
+
+1.04~--~1.20
+
+0.002
+
+1.04
+
+0.97~--~1.12
+
+0.262
+
+1.00
+
+0.93~--~1.06
+
+0.915
+
+1.00
+
+0.94~--~1.06
+
+1.000
+
+Respondents'Age
+
+1.00
+
+0.99~--~1.01
+
+0.991
+
+0.99
+
+0.98~--~1.00
+
+0.118
+
+1.00
+
+0.99~--~1.01
+
+0.828
+
+0.99
+
+0.98~--~1.00
+
+0.111
+
+1.00
+
+0.99~--~1.01
+
+0.475
+
+educ: educ 2
+
+0.95
+
+0.64~--~1.39
+
+0.786
+
+1.01
+
+0.67~--~1.53
+
+0.959
+
+1.94 **
+
+1.22~--~3.20
+
+0.007
+
+0.74
+
+0.53~--~1.03
+
+0.079
+
+1.28
+
+0.91~--~1.78
+
+0.153
+
+educ: educ 3
+
+1.01
+
+0.67~--~1.52
+
+0.973
+
+0.70
+
+0.45~--~1.08
+
+0.108
+
+2.53 **
+
+1.45~--~4.48
+
+0.001
+
+0.69
+
+0.44~--~1.06
+
+0.093
+
+1.27
+
+0.83~--~1.95
+
+0.270
+
+incc
+
+0.91
+
+0.77~--~1.08
+
+0.298
+
+0.97
+
+0.79~--~1.19
+
+0.790
+
+1.22
+
+0.98~--~1.55
+
+0.088
+
+0.92
+
+0.78~--~1.10
+
+0.347
+
+1.05
+
+0.90~--~1.22
+
+0.538
+
+Social Capital
+
+1.11 *
+
+1.00~--~1.24
+
+0.045
+
+0.73 ***
+
+0.62~--~0.87
+
+\textless0.001
+
+0.87
+
+0.72~--~1.04
+
+0.156
+
+1.02
+
+0.86~--~1.21
+
+0.775
+
+1.11
+
+0.97~--~1.26
+
+0.129
+
+Attitudes towardsScience\&Technology
+
+0.92 *
+
+0.86~--~0.98
+
+0.015
+
+0.96
+
+0.87~--~1.06
+
+0.412
+
+0.98
+
+0.91~--~1.06
+
+0.640
+
+0.94 *
+
+0.89~--~0.99
+
+0.023
+
+0.96
+
+0.89~--~1.03
+
+0.249
+
+Observations
+
+1345
+
+1054
+
+991
+
+1319
+
+812
+
+R2 Tjur
+
+0.052
+
+0.039
+
+0.033
+
+0.012
+
+0.025
+
+\begin{itemize}
+\tightlist
+\item
+  p\textless0.05~~~** p\textless0.01~~~*** p\textless0.001
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{includeHTML}\NormalTok{(}\StringTok{"output\_OR.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{seminarPaper_files/figure-latex/plotting of odds ratios for coefficients-1.pdf}
 
 \hypertarget{discussion-of-results-and-final-considerations}{%
 \section{Discussion of results and final
@@ -732,6 +1794,11 @@ Hawkins, K. E., \& Rovira Kaltwasser, C. (2018). Introduction. The
 ideational approach. In K. E. Hawkins, R. E. Carlin, L. Littvay, \& C.
 Rovira Kaltwasser (Eds.), \emph{The ideational approach to populism.
 Concept, theory, and analysis}. Routledge.
+
+\leavevmode\vadjust pre{\hypertarget{ref-hibbing2002stealth}{}}%
+Hibbing, J. R., \& Theiss-Morse, E. (2002). \emph{Stealth democracy:
+Americans' beliefs about how government should work}. Cambridge
+University Press.
 
 \leavevmode\vadjust pre{\hypertarget{ref-hooghe2011distrusting}{}}%
 Hooghe, M., Marien, S., \& Pauwels, T. (2011). Where do distrusting
