@@ -48,15 +48,17 @@ fre(wvs7$expert)
 wvs7Subset <- subset(wvs7, select = c("expert", "Q112", "GDPpercap1", "Q260", "Q262", "Q275R",
                                       "Q250", "Q252", "Q240", "Q199", "Q82_EU", "Q71", "Q72", "Q73",
                                       "Q158", "Q159", "Q160", "Q161", "Q163", "Q164", "Q169", "Q173",
-                                      "B_COUNTRY_ALPHA", "Q288R", "Q94R", "Q95R", "Q96R", "Q101R"))
+                                      "B_COUNTRY_ALPHA", "Q288", "Q288R", "Q94R", "Q95R", "Q96R", "Q101R"))
 
 # setting better variable names
 wvs7Subset <- wvs7Subset %>% dplyr::rename(corrPerc = Q112, GDPpc = GDPpercap1, sex = Q260, age = Q262, educ = Q275R,
                       attDem = Q250, satDem = Q252, lrScale = Q240, polInt = Q199, trustEU = Q82_EU,
                       trustGov = Q71, trustParties = Q72, trustParl = Q73,
                       sciLife = Q158, sciOpp = Q159, sciDepend = Q160, sciRight = Q161, sciWorld = Q163, impGod = Q164,
-                      sciVSrel = Q169, religiosity = Q173, country = B_COUNTRY_ALPHA,
+                      sciVSrel = Q169, religiosity = Q173, country = B_COUNTRY_ALPHA, inc = Q288,
                       incc = Q288R, memChurch = Q94R, memSport = Q95R, memArt = Q96R, memCharity = Q101R)
+
+fre(wvs7Subset$country)
 
 ########## adjust scales
 
@@ -66,8 +68,11 @@ var_lab(wvs7Subset$expert) <- "Attitude towards Technocracy"
 wvs7Subset$expert <- combineLevels(fac = wvs7Subset$expert, levs = c("-5", "-2", "-1"), newLabel = NA)
 
 # corrPerc: country level var --- corruption perception in country
-wvs7Subset$corrPerc <- as.numeric(wvs7Subset$corrPerc)
+wvs7Subset$corrPerc <- as.factor(wvs7Subset$corrPerc)
 var_lab(wvs7Subset$corrPerc) <- "Perception of Corruption in Respondents' Respective Country"
+wvs7Subset$corrPerc <- combineLevels(fac = wvs7Subset$corrPerc, levs = c("-5", "-2", "-1"), newLabel = NA)
+wvs7Subset$corrPerc <- as.numeric(wvs7Subset$corrPerc)
+fre(wvs7Subset$corrPerc)
 
 # GDPpc: country level var --- GDP per capita
 wvs7Subset$GDPpc <- as.numeric(wvs7Subset$GDPpc)
@@ -85,6 +90,16 @@ wvs7Subset$educ <- as.factor(wvs7Subset$educ)
 var_lab(wvs7Subset$educ) <- "Respondents' Education Level"
 wvs7Subset$educ <- combineLevels(fac = wvs7Subset$educ, levs = c("-5", "-2", "-1"), newLabel = NA)
 
+wvs7Subset$inc <- as.factor(wvs7Subset$inc)
+var_lab(wvs7Subset$inc) <- "Respondents' Income"
+wvs7Subset$inc <- combineLevels(fac = wvs7Subset$inc, levs = c("-5", "-2", "-1"), newLabel = NA)
+wvs7Subset$inc <- as.numeric(wvs7Subset$inc)
+
+wvs7Subset$incc <- as.factor(wvs7Subset$incc)
+var_lab(wvs7Subset$incc) <- "Respondents' Income (three steps)"
+wvs7Subset$incc <- combineLevels(fac = wvs7Subset$incc, levs = c("-5", "-2", "-1"), newLabel = NA)
+
+fre(wvs7Subset$inc)
 
 # attDem: attitude towards democracy
 ## this is not captured as in Bertsou & Pastorella via an index, but rather via a single variable; wording is:
@@ -95,7 +110,7 @@ wvs7Subset$attDem <- as.numeric(wvs7Subset$attDem)
 var_lab(wvs7Subset$attDem) <- "Importance of Democracy for Respondent"
 
 # alternative: satisfaction with democracy as in Chiru & Enyedi: satDem
-## Chiru & Enyedi capture it with an 11-point scale, just like this
+## Chiru & Enyedi capture it with an 11-point scale, similar to this variable
 ## the wording in WVS is: how satisfied are you with how the political system is functioning in your country
 ## these days? ---> so this is not exactly "democracy", but: with the country selection, we can infer, that
 ## (at least from the constitutions), they are democracies
@@ -107,13 +122,20 @@ wvs7Subset$lrScale <- as.numeric(wvs7Subset$lrScale)
 var_lab(wvs7Subset$lrScale) <- "Self-Ascribed Position on Left-Right-Scale"
 
 # polInt: political interest
-wvs7Subset$polInt <- as.numeric(wvs7Subset$polInt)
+wvs7Subset$polInt <- as.factor(wvs7Subset$polInt)
 var_lab(wvs7Subset$polInt) <- "Political Interest"
+wvs7Subset$polInt <- combineLevels(fac = wvs7Subset$polInt, levs = c("-5", "-2", "-1"), newLabel = NA)
+# wvs7Subset$polInt <- factor(wvs7Subset$polInt, levels = c(4, 3, 2, 1), labels = c("1", "2", "3", "4"))
+fre(wvs7Subset$polInt)
+fre(wvs7Chiru$polInt)
 
-# # trustEU: trust in the EU
-# wvs7Subset$trustEU <- as.factor(wvs7Subset$trustEU)
-# var_lab(wvs7Subset$trustEU) <- "Trust in the EU"
-# wvs7Subset$trustGov <- combineLevels(fac = wvs7Subset$trustGov, levs = c("-4", "-2", "-1"), newLabel = NA)
+# trustEU: trust in the EU
+wvs7Subset$trustEU <- as.factor(wvs7Subset$trustEU)
+var_lab(wvs7Subset$trustEU) <- "Trust in the EU"
+wvs7Subset$trustEU <- combineLevels(fac = wvs7Subset$trustEU, levs = c("-4", "-2", "-1"), newLabel = NA)
+wvs7Subset$trustEU <- as.numeric(wvs7Subset$trustEU)
+wvs7Subset$trustEU <- factor(wvs7Subset$trustEU, levels = c(4, 3, 2, 1), labels = c("1", "2", "3", "4"))
+fre(wvs7Subset$trustEU)
 
 ######## trust variables
 
@@ -321,6 +343,13 @@ fre(wvs7Chiru$expert)
 fre(wvs7Chiru$expert_bin)
 levels(wvs7Chiru$expert_bin)
 
+## dichotomized version of polInt
+wvs7Chiru$polInt_bin <- combineLevels(wvs7Chiru$polInt, levs = c("1", "2"), newLabel = "1") ## interested
+wvs7Chiru$polInt_bin <- combineLevels(wvs7Chiru$polInt_bin, levs = c("3", "4"), newLabel = "0") ## not interested
+wvs7Chiru$polInt_bin <- relevel(x = wvs7Chiru$polInt_bin, ref = "0") ## so that we can say stuff about the interested people
+levels(wvs7Chiru$polInt_bin)
+fre(wvs7Chiru$polInt)
+
 save(wvs7Chiru, file = "wvs7Chiru.RData")
 
 ## data set 1: Germany
@@ -329,16 +358,13 @@ wvs7GER <- wvs7Chiru %>% dplyr::filter(country %in% c("DEU"))
 ## data set 2: Greece
 wvs7GRC <- wvs7Chiru %>% dplyr::filter(country %in% c("GRC"))
 
-# ## data set 3: Hungary
-# wvs7HUN <- wvs7Chiru %>% dplyr::filter(country %in% c("HUN"))
-
-## data set 4: Romania
+## data set 3: Romania
 wvs7ROU <- wvs7Chiru %>% dplyr::filter(country %in% c("ROU"))
 
-## data set 5: Brazil
+## data set 4: Brazil
 wvs7BRA <- wvs7Chiru %>% dplyr::filter(country %in% c("BRA"))
 
-## data set 6: Argentina
+## data set 5: Argentina
 wvs7ARG <- wvs7Chiru %>% dplyr::filter(country %in% c("ARG"))
 
 #################################### regression models (testing here before inclusion into paper)
@@ -347,37 +373,34 @@ wvs7ARG <- wvs7Chiru %>% dplyr::filter(country %in% c("ARG"))
 #               sex + age + educ + incc + socCap + sciAtt,
 #             family = "binomial")
 
-modGER <- glm(data = wvs7GER, formula = expert_bin ~ lrScale + corrPerc + polInt + polTrust +
-                satDem + age + educ + incc + socCap + sciAtt,
+modGER <- glm(data = wvs7GER, formula = expert_bin ~ lrScale + corrPerc + polInt_bin + polTrust +
+                satDem + age + educ + inc + socCap + sciAtt,
               family = "binomial")
 # summary(glm(data = wvs7GER, formula = expert_bin~attDem, family = "binomial"))
 # 
-# summary(modGER)
+summary(modGER)
 
-modGRC <- glm(data = wvs7GRC, formula = expert_bin ~ lrScale + corrPerc + polInt + polTrust +
-                satDem + age + educ + incc + socCap + sciAtt,
+modGRC <- glm(data = wvs7GRC, formula = expert_bin ~ lrScale + corrPerc + polInt_bin + polTrust +
+                satDem + age + educ + inc + socCap + sciAtt,
               family = "binomial")
 
-# modHUN <- glm(data = wvs7HUN, formula = expert_bin ~ lrScale + polInt + polTrust +
-#                 sex + age + educ + incc + socCap + sciAtt,
-#               family = "binomial")
-
-modROU <- glm(data = wvs7ROU, formula = expert_bin ~ lrScale + corrPerc + polInt + polTrust +
-                satDem + age + educ + incc + socCap + sciAtt,
+modROU <- glm(data = wvs7ROU, formula = expert_bin ~ lrScale + corrPerc + polInt_bin + polTrust +
+                satDem + age + educ + inc + socCap + sciAtt,
               family = "binomial")
 
-modBRA <- glm(data = wvs7BRA, formula = expert_bin ~ lrScale + corrPerc + polInt + polTrust +
-                satDem + age + educ + incc + socCap + sciAtt,
+modBRA <- glm(data = wvs7BRA, formula = expert_bin ~ lrScale + corrPerc + polInt_bin + polTrust +
+                satDem + age + educ + inc + socCap + sciAtt,
               family = "binomial")
-summary(modBRA)
+# summary(modBRA)
 
-modARG <- glm(data = wvs7ARG, formula = expert_bin ~ lrScale +corrPerc + polInt + polTrust +
-                satDem + age + educ + incc + socCap + sciAtt,
+modARG <- glm(data = wvs7ARG, formula = expert_bin ~ lrScale +corrPerc + polInt_bin + polTrust +
+                satDem + age + educ + inc + socCap + sciAtt,
               family = "binomial")
 # summary(modARG)
 
-## test for displaying results:
-## make a combined markdown table of all models with memisc and pander
+################################################ tests for displaying results
+
+## make a combined markdown table of all models with memisc and pander --> as of march 2022, this doesn't work anymore
 combTable <- mtable('Germany' = modGER,
                     'Greece' = modGRC,
                     #'Hungary' = modHUN,
@@ -385,8 +408,6 @@ combTable <- mtable('Germany' = modGER,
                     'Brazil' = modBRA,
                     'Argentina' = modARG,
                     summary.stats = c('R-squared', 'F', 'p', 'N'))
-library(sjPlot)
-
 
 ### tab of models, log odds displayed
 tab_model(modGER, modGRC, modROU, modBRA, modARG, p.style = "numeric_stars",
@@ -397,37 +418,44 @@ tab_model(modGER, modGRC, modROU, modBRA, modARG, p.style = "numeric_stars",
 
 ## tab of models, odds ratios displayed
 tab_model(modGER, modGRC, modROU, modBRA, modARG, p.style = "numeric_stars",
-                     title = "Odds ratios: Regression models for Germany, Greece, Romania, Brazil, and Argentina",
-                     dv.labels = c("Germany", "Greece", "Romania", "Brazil", "Argentina"),
-                    file = "output_OR.html")
+          title = "Odds ratios: Regression models for Germany, Greece, Romania, Brazil, and Argentina",
+          dv.labels = c("Germany", "Greece", "Romania", "Brazil", "Argentina"),
+          file = "output_OR.html")
 
-## graphical/visual models
-### all in one
+## those tabs are saved as ordinary html output, then manually converted to png to be inserted as ordinary pictures
+
+# graphical/visual
+
+## all models in one figure
 plot_models(modGER, modGRC, modROU, modBRA, modARG, show.p = T)
 print_md(parameters(modGER))
 
-### univariate display of variables (especially for technocracy attitudes!)
+## univariate display of variables (especially for technocracy attitudes!)
 #### recode expert variable so it has value labels
 wvs7Chiru$expert_lab <- factor(wvs7Chiru$expert, levels = c(1, 2, 3, 4), labels = c("Very good", "Fairly good", "Fairly Bad", "Very bad"))
 freq(wvs7Chiru$expert_lab)
 
+#### the test: looks good, might be included
 sjPlot::plot_frq(wvs7Chiru$expert)
 sjPlot::plot_frq(wvs7Chiru$expert_bin)
 
-## testing the report package
+## testing the report package for statistical reporting
 report(modGER)
 
-
-
-
-fre(wvs7GER$satDem)
-
+## create a new country variable with appropriate sorting for technocracy level per country
 wvs7Chiru$country_re <- factor(wvs7Chiru$country, levels = c("ROU", "BRA", "ARG", "DEU", "GRC"))
 fre(wvs7Chiru$country_re)
 
+## save data set again
 save(wvs7Chiru, file = "wvs7Chiru.RData")
 
+## the visualization: with only binary data
 ggplot(data = wvs7Chiru) + 
   geom_bar(aes(y = country_re, fill = expert_bin), show.legend = T, position = "fill") + 
+  ylab(label = "Countries") + xlab("Percentages for citizens' attitudes towards technocracy per country (binary)")
+
+## same with all factor levels
+ggplot(data = wvs7Chiru) + 
+  geom_bar(aes(y = country_re, fill = expert), show.legend = T, position = "fill") + 
   ylab(label = "Countries") + xlab("Percentages for citizens' attitudes towards technocracy per country")
 
