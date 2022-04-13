@@ -446,9 +446,6 @@ report(modGER)
 wvs7Chiru$country_re <- factor(wvs7Chiru$country, levels = c("ROU", "BRA", "ARG", "DEU", "GRC"))
 fre(wvs7Chiru$country_re)
 
-## save data set again
-save(wvs7Chiru, file = "wvs7Chiru.RData")
-
 ## the visualization: with only binary data
 ggplot(data = wvs7Chiru) + 
   geom_bar(aes(y = country_re, fill = expert_bin), show.legend = T, position = "fill") + 
@@ -459,3 +456,5 @@ ggplot(data = wvs7Chiru) +
   geom_bar(aes(y = country_re, fill = expert), show.legend = T, position = "fill") + 
   ylab(label = "Countries") + xlab("Percentages for citizens' attitudes towards technocracy per country")
 
+## save data set again
+save(wvs7Chiru, file = "wvs7Chiru.RData")

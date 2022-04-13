@@ -121,9 +121,9 @@ As mentioned in the introductory paragraph, technocracy could be considered a st
 
 Another aspect that describes the difference between democratic/representative and technocratic systems has been given by Robert A. Dahl in his classic 'On Democracy' in the chapter 'Ideal Democracy'. He takes a position of staunch resistance toward technocratic expert government, stating: _'Because experts may be qualified to serve as your agents does not mean that they are qualified to serve as your rulers.'_ [@dahl_onDemocracy, p. 73]
 Thereby, he made the exact opposite point to Plato's argument described before. The latter assumed the philosopher-kings (so to say, the 'proto-technocrats') to be the best possible rulers because they have a certain set of skills that the broad masses do not have and would apply it to achieve the greater good for all of society --- democracy as a form of governance, in turn, could cause chaos.
-Dahl on the other hand brings forth the notion of _corruption through power_, by which the pursuit of the 'greater good' for the whole society can be undermined. *Sobald Buch vorhanden, hier weiterschreiben*
+Dahl on the other hand brings forth the notion of _corruption through power_, by which the pursuit of the 'greater good' for the whole society can be undermined. 
 
-To further shed light on the term 'technocracy', another definition given by @caramani2020technocratic should be considered. He considers it to be 'a form of power in which decisions over the allocation of values are made by experts or technical elites based on their knowledge, independently and in the long-term interest of the whole of society' [@caramani2020technocratic, p. 3].
+To further shed light on the term 'technocracy' itself, another definition given by @caramani2020technocratic should be considered. He considers it to be 'a form of power in which decisions over the allocation of values are made by experts or technical elites based on their knowledge, independently and in the long-term interest of the whole of society' [@caramani2020technocratic, p. 3].
 He further adds four features making government technocratic in nature [@caramani2020technocratic, pp. 3f.]:
 
 1. The source of power is knowledge, rather than popular will (e. g. through elections).
@@ -136,7 +136,8 @@ He further adds four features making government technocratic in nature [@caraman
 
 For this paper, it is also important to discuss how technocracy may be measured. When doing attitudinal research with citizens, especially concerning elusive and heterogeneous topics like technocracy, researchers have to be careful --- as not every respondent understands the same under such complex concepts. This is why one should also take a look at what empirical studies of the concept, both with focus on a state- and a citizen-level have already found so far.
 
-## The road so far: what has been found out about technocracy on state- and individual level?
+## What was found out so far: empirical and theoretical studies on technocracy and technocratic attitudes
+
 
 <!-- + maybe include technopopulism? -->
 <!-- + Deseriis -->
@@ -177,7 +178,7 @@ Another important criticism of democratic decision-making by technocratically mi
 
 > H2: Technocracy and expert government are seen more negatively when trust in political institutions of representative democracy is higher.
 
-In a similar vein, @bertsou2017technocratic have found evidence that people with higher political interest would see technocratic government in a more negative view. They derived this from the stealth democracy literature (e. g. @hibbing2002stealth and coffe2014education) [@bertsou2017technocratic, p. 435]. Therefore, a fitting variable will also be included in this study, checking for the following hypothesis:
+In a similar vein, @bertsou2017technocratic have found evidence that people with higher political interest would see technocratic government in a more negative view. They derived this from the stealth democracy literature (e. g. @hibbing2002stealth and coffe2014education) [@bertsou2017technocratic, p. 435], listing the variable in their pool of controls for their analysis. Therefore, this paper's models will also contain a fitting variable, checking for the effect with the following hypothesis:
 
 > H3: Technocracy and expert government are seen more negatively when citizens' political interest is higher.
 
@@ -267,7 +268,7 @@ Before describing the method used to test the hypotheses of this paper, it is im
 _Self-ascribed position on left-right-scale_ is a variable that measures the position of citizens on a scale of 1 (left) to 10 (right). The variable was treated as quasi-metric, focusing more on a continuous depiction of political ideology, rather than seeing each and every level individually as a 'statement' of a citizen. It will be used to check H4.
 _Perception of corruption in respondents' respective country_ is used to check H5. It measures on a scale of 1 (no corruption is perceived in the country) to 10 (abundant corruption is perceived in the country).
 _Political interest_ measures the degree to which a citizen is interested in politics and is being used to test H3. It was recoded into a binary variable, with 0 meaning "not politically interested" and 1 meaning "politically interested". This was done to ease interpretation.
-_Political trust_ is an index that was created from three variables: confidence in national parliament, national government, and national parties per citizen, just as suggested in @bertsou2017technocratic. It is used to check for H2 and ranges from 1 (low trust) to 10 (high trust). Cronbach's alpha is at 0.87, indicating an excellent fit.
+_Political trust_ is an index that was created from three variables: confidence in national parliament, national government, and national parties per citizen, just as suggested in @bertsou2017technocratic. It is used to check for H2 and ranges from 1 (low trust) to 10 (high trust). Cronbach's alpha is at 0.87, indicating an excellent fit of the index.
 _Satisfaction with democracy_ is a variable that has been measured quite differently throughout technocracy research (see e. g. @bertsou2017technocratic vs. @chiru2022wants). In this paper, it is measured by a single item that reads as follows: "How satisfied are you with how the political system is functioning in your country these days? On the scale from 1 to 10 below, 1 means not satisfied at all and 10 means completely satisfied". This is also the reason why results with this variable may not be fully comparable with other studies but the variable will be used here to check H1. 
 _Respondents' age, education, income_ are variables that indicate demographic/economic information about individual citizens. They are self-explanatory. Educational level and income are part of what is being used to check H6.
 _Social capital_ is also used in H6. It is an index created for this study, using @franzen2007sozialkapital. Social capital is captured in an index formed via membership indicator variables for church groups, sports clubs, charitable organizations, and art/music/recreational organizations. Cronbach's alpha for the index is at 0.71, indicating a fitting selection of items. It ranges from 1 (low social capital) to 5 (high social capital).
@@ -277,7 +278,7 @@ _Attitudes towards science_ is the variable used to test the novel hypothesis H7
 + "Because of science and technology, there will be more opportunities for the next generation"
 
 ## Method: individual country-wise binary logistic regressions
-Now that the variables have been explained, a brief paragraph about the methods of this paper shall also clarify more of its thrust. It will contain per-country binary logistic regression results, being reported both as log-odds coefficients to determine the influence of the independent variables quickly (Figure 1) and odds ratio coefficients to quantify the strength of the influcence (Figure 2).
+Now that the variables have been explained, a brief paragraph about the methods of this paper shall also clarify more of its thrust. It will contain per-country binary logistic regression results, being reported both as log-odds coefficients to determine the influence of the independent variables quickly (Figure 1) and odds ratio coefficients to quantify the strength of the influence (Figure 2).
 
 # Analysis and results
 
@@ -309,13 +310,22 @@ wvs7BRA <- wvs7Chiru %>% dplyr::filter(country %in% c("BRA"))
 wvs7ARG <- wvs7Chiru %>% dplyr::filter(country %in% c("ARG"))
 ```
 
-After this uni- and bivariate approach, the next step is to take a look at the regression results for the countries. In a first step, the country subsets were created. Then, as explained, a binary logistic regression model was fit to the data per country. A graphical version can be found in the appendix (Appendix C), for the interpretation here, this paper will concentrate on the regression tables.
+After this uni- and bivariate approach, the next step is to take a look at the regression results for the countries. In a first step, the country subsets were created. Then, as explained, a binary logistic regression model was fit to the data per country. A graphical version can be found in the appendix (Appendix C), for the interpretation here, this paper will concentrate on the regression tables. For the interpretation process, this paper orientates itself by @wenzelburger2014statistische, especially the chapter on logistic regression analysis [see @wenzelburger2014statistische, pp. 55-89]. Coefficients and odds ratios are rounded to two digits. In the case of odds ratios under the threshold of 1, reciprocal values were reported, indicating the odds of an event *not* happening.
 
-From there, we can see that the first variable concerning the _left-right self-placement_ of citizens is not significant. Therefore, no statistically sound and correct inferences can be drawn with regard to technocratic attitudes. This also means that, in the context of this paper, there is no evidence in favour of H4 across countries. This is also the same for the _corruption perception_ of citizens, meaning that also H5 cannot be accepted under these circumstances.
-_Political interest_ on the other hand, the effect on technocratic attitudes is significant, but the direction is not as anticipated. Other than stated in the hypothesis, the more interested citizens are interested in politics, the less likely 
+From there, we can see that the first variable concerning the _left-right self-placement_ of citizens is not significant. Therefore, no statistically sound and correct inferences can be drawn with regard to technocratic attitudes. This also means that, in the context of this paper, there is no evidence in favour of *H4* across countries. This is also the same for the _corruption perception_ of citizens, meaning that also *H5* cannot be accepted under these circumstances for any case.
 
+_Political interest_ on the other hand, the effect on technocratic attitudes is significant with citizens both in Germany and in Argentina. Taking a look at the regression tables, we can infer from Figure 1 that the direction is as intended (with [1] symbolizing that the coefficient is for the politically interested citizens). A politically interested citizen is less likely to find technocracy an appealing concept than one that is not interested in politics. This finding is in line with *H3* for the respective countries. To quantify the results, the odds ratios are used: with the variable increasing by one unit, the odds of *not* having technocratic attitudes increase by the factors of 1.68 (Germany) and 1.88 (Argentina) --- ceteris paribus.
 
+Moving on to _political trust_, one can find a significant effect for Romania, which is also in the intended direction: higher values of political trust correspond with a less technocratic attitude of citizens. Quantifying it again by using odds ratios, one can see that for a one-unit increase on the political trust scale, the odds of *not* having technocratic attitudes increases by the factor of 1.11. Evidence can therefore be found in favour of *H2* for the Romanian case.
 
+For the effect of _satisfaction with democracy_, this paper receives (at first) counterintuitive results for Germany and Greece: the coefficient is significant, but the direction is not as intended, with higher values on the satisfaction scale corresponding with the occurence of technocratic attitudes. The effect is not large, quantifying it via the odds ratios again, with a one unit increase of satisfaction corresponding with an increased odds of having technocratic attitudes of a factor of 1.08 (Germany) and 1.10 (Greece), respectively. This paper therefore rejects *H1* in the countries, where the coefficient was significant.
+The effect remains somewhat puzzling; an attempt to explain this finding can be made by taking a look at @lavezzolo2021will again. They explicitly describe so-called _technopols_ as the form technocracy takes most often in everyday politics. Technopols are full party politicians that nevertheless exert expertise to a certain degree, having a technical/knowledge-based background. The authors also point out that there is a strong demand for this type of politician, [see @lavezzolo2021will, p. 1507; for the concept of technopols explained in more detail, see @joignant2011technopols]. Form this point of view, one could argue that it is possible that people _can_ indeed be satisfied with democracy _and_ in favour of technocracy in some more adapted, within-democracy form.
+
+_Age_ of respondents and _income_ are another two variables that do not possess statistical significance in the logistic regression model across all countries. For citizens' _educational level_, a significant coefficient can be found in the Romanian case. The effect points in the intended direction, indicating that with higher educational level, one can also find more technocratic attitudes in citizens of this country (factors: 2.02 for mid-level, 2.60 for high-level education). The reasoning behind this may be, what was already mentioned by @chiru2022wants: people with higher education tend to belong to a social elite that may see technocracy as a means to counteract radical forces, creating a save haven for their assets. Also, these people may even consider themselves to be experts or possess a great amount of knowledge, rendering technocracy a viable alternative for them to make their voices more heard in politics --- an argument in a more similar vein to @bickerton2020technocracy.
+_Social capital_ is also significant in two cases (Germany and Greece), but here, the effect remains somewhat unclear. In Germany, the analysis finds evidence in favour of *H6*: people with higher social capital are more likely to be in favour of technocratic attitudes (factor: 1.14 for having technocratic attitudes for a one-point increase on the social capital scale). In Greece, the effect is inverted, though: people with higher social capital are less likely to find technocracy appealing (factor: 1.41 for *not* having technocratic attitudes for a one-point increase on the social capital scale).
+With _income_ having an insignificant coefficient, the effect of _educational level_, despite its significance and effect, only being significant in one country, and the findings regarding _social capital_ being somewhat unclear, this paper rejects H6. The findings of @chiru2022wants could not exactly be recreated in this paper, indicating that further research has to be done in this direction.
+
+The analysis is coming to a close with a last look at the _attitudes of citizens towards science and technology_ and the novel hypothesis *H7*. Here, one can find two significant coefficients for Germany and Brazil. The direction is not as was intended in the beginning, indicating that citizens with more positive attitudes towards science tend to view technocracy more negatively. The effect is rather small quantitatively, indicating factors of 1.08 (Germany) and 1.06 (Brazil) for *not* having technocratic attitudes for a one-point increase on the scale of scientific and technological attitudes.
 
 ```{r all the models, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 #################################### regression models per country
@@ -365,60 +375,63 @@ include_graphics(path = "output_LO.png")
 include_graphics(path = "output_OR.png")
 ```
 
-
-
-
-<!-- + ad H5: maybe also consider that better education means that they themselves are experts? who determines who is an expert? bickerton & accetti! -->
-
-
-
-
-
-
 # Discussion of results and final considerations
 
 <!-- + discuss what we found out -->
 <!-- + discuss what that means with regard to especially Bertsou/Pastorella's findings from 2017 with the old data -->
 <!-- + discuss if there are any implications about what should be examined more closely in the future: ESPECIALLY WITH BETTER DATA AVAILABILITY! -->
 
-It is clear that those novel hypotheses are tested in a rather small space here, thus making it a desideratum to expand it as soon as more data may be available in the future.
+It is clear that the novel hypothesis concerning attitudes towards science and technology and their effect on technocratic attitudes within citizens are tested in a rather small space here. The results can only be considered preliminary in nature, thus making it a desideratum to expand research, with more data becoming available in the future and more efforts being made in the research direction of technocratic attitudes.
+
+Also, another question can be addressed: the operationalization of the variable. In this paper, as was already discussed, an index of two items was built. The value of Cronbach's alpha was also reported as satisfactory. But there are more other possibilities, e. g. to incorporate more of the science-focused questions from the WVS into an even more fleshed out index. Another possibility would be to design a study centered around these scientific attitudes and values of people, where one would have to first come up with a fitting questionnaire. In there, the questions or statements should revolve only around the views of respondents on science and technology, plus established context variables like political trust and interest.
+As was already mentioned throughout this paper, the field of attitudinal research, concentrating on technocratic attitudes in particular, is still an evolving one with lots of 'moving parts'. Scholars have not come to as many decisive conclusions as is the case with e. g. populism. Therefore, data availability is a big desideratum, too.
+
+For future scholarly research, another thinkable relationship concerning technocratic attitudes within citizens shall be proposed, which was not included in this study due to the space limitations. As sort of a counterpart to opinions on science and technology, also religiosity is an imaginable variable when researching technocratic attitudes. A few preliminary steps in this direction were done in the data preparation part of this paper.
+
+What this paper has shown is that there is still a lot of research to be done in the future. A few effects that have been discussed by different scholars have proven to hold also in this particular setting, but not all of them provided uncontested results. The reason of this is clearly the ever-evolving nature of the topic --- which is on the other hand also opening up a lot of new opportunities and research spaces for political scientists to explore new focal points within the subject.
 
 \newpage{}
 
 # Declaration of authorship
 
-I hereby declare
+I hereby declare that I have independently prepared the term paper with the title <INSERT TITLE> within the framework of the course PWM-CS-HS2: Digital Challenges to Institutions (winter term 2021/22), and that I have used no other aids than those mentioned in the list of sources and the bibliography section, and that I have marked as such all passages taken verbatim or in spirit from the sources and literature.
 
-\newpage{}
+\vfill
 
-# References
-
-<div id="refs"></div>
+Signature \hfill Bamberg, 15.04.2022
 
 \newpage{}
 
 # Appendix
+## Online appendix
+The [online repository of this paper on GitHub](https://github.com/FWisniewski44/digital-challenges) hosts the files and the code necessary to replicate the results of this paper.
+Due to the regulations and terms of service of the WVS, the data set cannot be provided, as redistribution in any form is not allowed. However, one can download WVS wave 7 from their website and adjust the corresponding lines of code after cloning the repository.
+
 ## Appendix A: Univariate frequency table and graphics for dependent variable
 
 ```{r freq table expert, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 sjmisc::frq(x = wvs7Chiru$expert_lab, show.na = T, title = "Frequency table for technocracy attitudes", out = "viewer", file = "freqtable_expert.html")
 ```
 
-```{r frequency table expert, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r frequency table expert, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap="Citizens' attitudes towards technocracy (frequency table)", out.width="20cm", out.height="15cm", fig.align='center'}
 include_graphics("freqtable_expert.png")
 ```
 
-```{r frequencies in data, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-sjPlot::plot_frq(wvs7Chiru$expert_lab)
-sjPlot::plot_frq(wvs7Chiru$expert_bin)
+```{r frequencies in data: 4 level scale, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap="Citizens' attitudes towards technocracy (4-level scale)", out.width="15cm", out.height="8cm", fig.align='center'}
+sjPlot::plot_frq(wvs7Chiru$expert_lab, axis.title = "Attitudes towards technocracy", title = "Attitudes towards democracy, 4-level scale")
 ```
+
+```{r frequencies in data: binary scale, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap="Citizens' attitudes towards technocracy (binary)", out.width="15cm", out.height="8cm", fig.align='center'}
+sjPlot::plot_frq(wvs7Chiru$expert_bin, axis.title = "Attitudes towards technocracy", title = "Attitudes towards democracy, binary", axis.labels = c("positive", "negative"), sort.frq = "desc")
+```
+
 
 ## Appendix B: Bivariate analysis of dependent variable per country
-```{r technocratic attitudes in citizens by countries --- recreation of Bertsou & Pastorella graphic with the EVS, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
-ggplot(data = wvs7Chiru) + geom_bar(aes(y = country_re, fill = expert_lab), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("percentages for technocracy attitudes of people in countries")
+```{r technocratic attitudes in citizens by countries --- recreation of Bertsou & Pastorella graphic with the EVS, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap="Citizens' attitudes towards technocracy (standardized scale, four levels)"}
+ggplot(data = wvs7Chiru) + geom_bar(aes(y = country_re, fill = expert_lab), show.legend = T, position = "fill") + ylab(label = "countries") + xlab("Percentages for technocracy attitudes of people in countries")
 ```
 
-```{r alternative plot binary, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r alternative plot binary, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap="Citizens' attitudes towards technocracy (standardized scale, binary)", out.width="15cm", out.height="8cm"}
 ggplot(data = wvs7Chiru) + geom_bar(aes(y = country_re, fill = expert_bin), show.legend = T, position = "fill") + ylab(label = "Countries") + xlab("Percentages for citizens' attitudes towards technocracy per country")
 ```
 
@@ -431,3 +444,5 @@ plot_models(modGER, modGRC, modROU, modBRA, modARG, show.p = T,
             m.labels = c("Germany", "Greece", "Romania", "Brazil", "Argentina"),
             legend.title = "Dep. variables per country")
 ```
+
+# References
