@@ -30,3 +30,6 @@ vignettes/*.pdf
 apa.csl
 apa_v7_own.csl
 seminarPaper.pdf
+wvs7subset.csv
+wvs7subset.xlsx
+wvs7Chiru.RData
