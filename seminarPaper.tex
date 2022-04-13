@@ -9,15 +9,14 @@
 ]{article}
 \title{\includegraphics[width=4cm,height=\textheight]{/Users/flo/Documents/backup_doc_linux/uni-bamberg.png}
 
-Technocracy as a challenge to representative democracy}
+What to make of citizens' attitudes towards technocracy?}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{Citizens' attitudes towards technocracy and what to make of
-it}
+\subtitle{A quantitative exploratory study}
 \author{Florian Wisniewski\footnote{Otto-Friedrich-Universität Bamberg
   (Matriculation Nr.: 2028075) - 3rd semester, M. A. Political Science} \and Am
 Werkkanal 9, 96047 Bamberg \textbar{}
@@ -60,6 +59,8 @@ Werkkanal 9, 96047 Bamberg \textbar{}
 \hypersetup{
   pdfauthor={Florian Wisniewski; Am Werkkanal 9, 96047 Bamberg \textbar{} florian.wisniewski@stud.uni-bamberg.de},
   pdflang={EN},
+  pdfkeywords={technocracy --- attitudinal research --- expert
+government --- citizen-centered --- quantitative study},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -68,6 +69,16 @@ Werkkanal 9, 96047 Bamberg \textbar{}
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -147,14 +158,20 @@ Werkkanal 9, 96047 Bamberg \textbar{}
 \begin{document}
 \maketitle
 \begin{abstract}
-This paper will revolve around the topic of technocracy. Whilst it has
-been examined in detail on state level, research about citizens'
-attitudes towards this concept of government is still rather scarce.
-Building remotely upon the hypotheses and findings of Bertsou \&
-Pastorella (2017), this paper has a twofold goal: first, it will
-function at least partially as a replication study to aforementioned
-research, testing parts of the results for validity with newer data
-available. Secondly, new inferences could be drawn (if found).
+In political science research, research on technocracy is still an
+evolving topic. Compared to other ones, e. g. populism, there have not
+been as many explorative studies in this direction. Whilst technocracy
+has been examined in more detail on state level, a citizen-centered
+approach is still scarce, but in the making. This paper will add to this
+part of the literature. Building on core hypotheses of existing studies,
+it examines already tested hypotheses with newer data and in five
+selected countries, finding both proof in favour of current scholarly
+beliefs, but also contesting evidence in some regard. Furthermore, a new
+hypothesis about citizens' attitudes towards science and the
+relationship of it with technocratic attitudes is put forth. The paper
+concludes with remarks on further scholarly endeavours and ways to
+enhance attitudinal research in the research space of technocracy and
+expert government.
 \end{abstract}
 
 \setstretch{1.5}
@@ -168,8 +185,8 @@ available. Secondly, new inferences could be drawn (if found).
 \section{Introduction}\label{introduction}}
 
 One of the most discussed themes in political science over the last
-years most definitely was \emph{populism}. Especially in the US -- with
-the rise of Donald Trump to become the 45th president in 2017 and the
+years most definitely was populism. Especially in the US -- with the
+rise of Donald Trump to become the 45th president in 2017 and the
 accompanying transformation of the Republican Party -- this phenomenon
 evolved into a well-researched topic. But not only there: also in
 Europe, the rise of populism and populist politicians became a big
@@ -177,9 +194,10 @@ issue, also within the scientific community - namely triggered by e. g.
 left-wing populist SYRIZA's rise to power in Greece, the emergence of
 the AfD as a right-wing populist party in Germany, or the presidential
 race in France being decided between the liberal candidate Macron and
-the right-wing or even far right populist Marine Le Pen. When talking
-and writing about it, one comes across many different definitions to the
-same term populism: Cas Mudde's `populism as a thin ideology'
+the right-wing or even far right populist Marine Le Pen just as of the
+writing of this paper in April 2022. When talking and writing about it,
+one comes across many different definitions to the same term populism:
+Cas Mudde's `populism as a thin ideology'
 (\protect\hyperlink{ref-mudde2004populist}{Mudde, 2004}), Ernesto
 Laclau's `populism as a discursive strategy'
 (\protect\hyperlink{ref-laclau2005populist}{Laclau, 2005}), Jan-Werner
@@ -189,28 +207,28 @@ Müller's `methods of populism'
 (\protect\hyperlink{ref-hawkins2018ideational}{Hawkins \& Rovira
 Kaltwasser, 2018}).
 
-But populism is by far not the only `alternative approach' to
-representative democracy. One of the other possible views is
-technocracy, and research within this space is still very fluid and
-evolving in this field within political science. A lot of said research
-has so far often concentrated on the more normative aspects of
-technocracy (\protect\hyperlink{ref-habermas2015lure}{Habermas, 2015})
-or has taken a rather expert-centered stance, discussing the
-determination of who the experts would be and who chooses when someone
-is considered one
+But populism is by far not the only `alternative approach' to democracy
+in its various forms. One of the other possible views is technocracy,
+and research within this space is still very fluid and evolving in this
+field within political science. A lot of said research has so far often
+concentrated on the more normative aspects of technocracy
+(\protect\hyperlink{ref-habermas2015lure}{Habermas, 2015}) or has taken
+a rather expert-centered stance, discussing the determination of who the
+experts would be and who chooses when someone is considered one
 (\protect\hyperlink{ref-bickerton2020technocracy}{Bickerton \& Accetti,
-2020}). But there is more to \emph{`technocracy' as a whole topic} than
-that. For example, one could also ask the question of how the citizens
+2020}). But there certainly is more to \emph{`technocracy' as a whole
+topic} than that. For example, one could also ask how citizens
 themselves see this concept in turn.
 
-This paper seeks to take this more citizen-centered approach: the
-question that will be addressed is about their attitudes towards this
-alternative concept of government and governance. Other social
-scientists have very recently taken up this narrative before and have
-shown that there is significant homogeneity throughout Europe's people
-when talking about their opinions of technocracy (see e. g.
-\protect\hyperlink{ref-bertsou2017technocratic}{Bertsou \& Pastorella}
-(\protect\hyperlink{ref-bertsou2017technocratic}{2017}),
+This is what this paper wants to do: the question that will be addressed
+is about citizens' attitudes towards this alternative concept of
+government, and how it is influenced by certain political aspects,
+values, views, and also demographic variables. Other social scientists
+have only very recently taken up this narrative, showing that there is
+significant homogeneity throughout people, especiall in different
+countries or continents when examining their opinions of technocracy
+(see e. g. \protect\hyperlink{ref-bertsou2017technocratic}{Bertsou \&
+Pastorella} (\protect\hyperlink{ref-bertsou2017technocratic}{2017}),
 \protect\hyperlink{ref-ganuza2020experts}{Ganuza \& Font}
 (\protect\hyperlink{ref-ganuza2020experts}{2020}),
 \protect\hyperlink{ref-lavezzolo2021will}{Lavezzolo et al.}
@@ -218,29 +236,27 @@ when talking about their opinions of technocracy (see e. g.
 \protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
 (\protect\hyperlink{ref-chiru2022wants}{2022}) or
 \protect\hyperlink{ref-bertsou2022people}{Bertsou \& Caramani}
-(\protect\hyperlink{ref-bertsou2022people}{2022})). However, the data
-they used was from back in 2009; this makes it highly likely that
-citizens' attitudes towards technocracy may have evolved and changed
-over time, especially considering events after 2009 up to the origin of
-the newer data set in 2017, like the Brexit referendum or the aftermath
-of the financial crisis in Europe.
+(\protect\hyperlink{ref-bertsou2022people}{2022})).
 
-Therefore, taking survey data about citizens' stances towards
-technocracy in European countries, this exploratory analysis aims at
-shedding more light upon the real-world implications of technocracy as a
-normative concept with updated data and see if previously obtained
-results nowadays still hold. Also, as a secondary goal, it shall be
-examined if there are certain patterns within the cross-national data
-that promise even more interesting research perspectives for the future.
+Therefore, taking very recent survey data about citizens' views of
+technocracy in five different countries, this exploratory analysis aims
+at shedding more light upon the real-world implications of technocracy
+as a normative concept with updated data and see if previously obtained
+results and hypotheses still hold. Also, as a secondary goal, a new
+hypothesis about citizens' views of science and technology shall be
+introduced. By the end of the study, new tracks for future research in
+this evolving and still young research area shall also be given, thereby
+also functioning a bit as a small research note.
 
 \newpage{}
 
 \hypertarget{theoretical-considerations}{%
 \section{Theoretical considerations}\label{theoretical-considerations}}
 
-\hypertarget{conceptual-background-defining-the-concept-of-technocracy-and}{%
-\subsection{Conceptual background: defining the concept of technocracy
-and}\label{conceptual-background-defining-the-concept-of-technocracy-and}}
+\hypertarget{conceptual-and-normative-background-the-roots-of-technocracy-as-a-concept-introductory-definitions}{%
+\subsection{Conceptual and normative background --- the `roots' of
+technocracy as a concept, introductory
+definitions}\label{conceptual-and-normative-background-the-roots-of-technocracy-as-a-concept-introductory-definitions}}
 
 As mentioned in the introductory paragraph, technocracy could be
 considered a still evolving field of action within the social sciences.
@@ -257,22 +273,44 @@ know about and have the skills required to do so (see
 \protect\hyperlink{ref-bickerton2020technocracy}{Bickerton \& Accetti,
 2020, p. 32f}.).
 
-Another aspect that describes the difference between
-democratic/representative and technocratic systems has been given by
-Robert A. Dahl in his classic `On Democracy' in the chapter `Ideal
-Democracy.' He takes a position of staunch resistance toward
-technocratic expert government, stating: \emph{`Because experts may be
-qualified to serve as your agents does not mean that they are qualified
-to serve as your rulers.'}
+Another aspect that describes the difference between (representatively)
+democratic and technocratic systems has been given by Robert A. Dahl in
+his classic `On Democracy' in the chapter `Ideal Democracy.' He takes a
+position of staunch resistance toward technocratic expert government,
+stating: \emph{`Because experts may be qualified to serve as your agents
+does not mean that they are qualified to serve as your rulers.'}
 (\protect\hyperlink{ref-dahl_onDemocracy}{Dahl, 2020, p. 73}) Thereby,
-he made the exact opposite point to Plato's argument described before.
-The latter assumed the philosopher-kings (so to say, the
-`proto-technocrats') to be the best possible rulers because they have a
-certain set of skills that the broad masses do not have and would apply
-it to achieve the greater good for all of society --- democracy as a
-form of governance, in turn, could cause chaos. Dahl on the other hand
-brings forth the notion of \emph{corruption through power}, by which the
-pursuit of the `greater good' for the whole society can be undermined.
+he made the exact opposite point to Plato's argument described above The
+latter assumed the philosopher-kings (so to say, the `proto-technocrats'
+of Ancient Greece) to be the best possible rulers because they would
+possess a certain set of skills that the broad masses did not have and
+would apply it to achieve the greater good for all of society ---
+democracy as a form of governance, in turn, could or would just cause
+chaos. Dahl on the other hand brings forth the notion of
+\emph{corruption through power}, by which their proclaimed pursuit of
+the `greater good' for the whole society can be undermined, which he
+sees proven by history, too (see
+\protect\hyperlink{ref-dahl_onDemocracy}{Dahl, 2020, p. 74}). What the
+`advocates of Guardianship' tried to do, is, according to Dahl,
+attacking democracy at a perceived weakness: ordinary people, so they
+claim, would lack the competence to govern --- with the Guardians having
+it by their superior knowledge of the greater good and the means to
+acheive it for the society. Dahl also points to another important aspect
+of this debate: the lack of competence of the citizens does not, in the
+advocates for expert rule's eyes, diminish the fact that all people or
+their interests were equal. According to him, it just means that, by
+their superior \emph{knowledge}, the latter were better suited to rule,
+so that everyone could profit from it (see
+\protect\hyperlink{ref-dahl_onDemocracy}{Dahl, 2020, pp. 69--71}).
+Another last argument made by Dahl shall be laid out here: the critique
+of a general scientific way of decision-making in politics. He points to
+imporant policy-related questions like e. g. state budget creation and
+assignment or welfare state policies. Those are, to him, areas that
+present an unmountable challenge to this expert-centered, scientific
+decision-making process, as he sees no possibility of the existence of a
+group of people who could satisfactorily provide an answer to these
+questions (see \protect\hyperlink{ref-dahl_onDemocracy}{Dahl, 2020, p.
+72f}.).
 
 To further shed light on the term `technocracy' itself, another
 definition given by
@@ -312,12 +350,13 @@ concerning elusive and heterogeneous topics like technocracy,
 researchers have to be careful --- as not every respondent understands
 the same under such complex concepts. This is why one should also take a
 look at what empirical studies of the concept, both with focus on a
-state- and a citizen-level have already found so far.
+state- and a citizen-level have already found so far, and how they did
+it.
 
-\hypertarget{what-was-found-out-so-far-empirical-and-theoretical-studies-on-technocracy-and-technocratic-attitudes}{%
-\subsection{What was found out so far: empirical and theoretical studies
-on technocracy and technocratic
-attitudes}\label{what-was-found-out-so-far-empirical-and-theoretical-studies-on-technocracy-and-technocratic-attitudes}}
+\hypertarget{the-way-so-far-empirical-and-theoretical-findings-on-technocracy-and-technocratic-attitudes}{%
+\subsection{`The way so far': empirical and theoretical findings on
+technocracy and technocratic
+attitudes}\label{the-way-so-far-empirical-and-theoretical-findings-on-technocracy-and-technocratic-attitudes}}
 
 Now, after having defined in detail the implications of technocratic
 systems, the area of tension between representative democracy and
@@ -393,9 +432,8 @@ important for this paper, because it sheds more light on what people may
 actually think and most importantly \emph{understand} when asked about
 `technocracy.' They
 
-\hypertarget{hypotheses-to-be-tested-in-this-paper}{%
-\subsection{Hypotheses to be tested in this
-paper}\label{hypotheses-to-be-tested-in-this-paper}}
+\hypertarget{hypotheses}{%
+\subsection{Hypotheses}\label{hypotheses}}
 
 Having explored both the theoretical background of technocracy as a
 concept (including definitions of the term) under 2.1, and also some
@@ -408,9 +446,9 @@ generated and theoretically justified in the course of this paragraph.
 All in all, a two step approach will be taken: both individual level and
 country level hypotheses will be formulated.
 
-\hypertarget{core-hypotheses-on-the-individual-level}{%
-\subsubsection{Core hypotheses on the individual
-level}\label{core-hypotheses-on-the-individual-level}}
+\hypertarget{hypotheses-on-the-individual-level}{%
+\subsubsection{Hypotheses on the individual
+level}\label{hypotheses-on-the-individual-level}}
 
 The first of the core hypotheses having been constantly checked and
 updated by scholars with newer data becoming available over the years
@@ -596,9 +634,9 @@ H6: Citizens that are better educated, have more social capital, and
 have more income view technocracy in a more positive way.
 \end{quote}
 
-\hypertarget{new-hypothesis-with-regard-to-citizens-views-on-sciencetechnology}{%
-\subsubsection{New hypothesis with regard to citizens' views on
-science/technology}\label{new-hypothesis-with-regard-to-citizens-views-on-sciencetechnology}}
+\hypertarget{new-hypothesis-citizens-views-on-sciencetechnology}{%
+\subsubsection{New hypothesis: citizens' views on
+science/technology}\label{new-hypothesis-citizens-views-on-sciencetechnology}}
 
 While the first five hypotheses were ones that were already included in
 former studies, this paper aims to also contribute a new facet to
@@ -665,8 +703,8 @@ H7: People that have a higher opinion of science and technology tend to
 view technocracy and government by experts in a more positive light.
 \end{quote}
 
-\hypertarget{methods-and-data}{%
-\section{Methods and data}\label{methods-and-data}}
+\hypertarget{data-and-methods}{%
+\section{Data and methods}\label{data-and-methods}}
 
 \hypertarget{data-and-caveats}{%
 \subsection{Data and caveats}\label{data-and-caveats}}
@@ -690,9 +728,8 @@ and also less variables. The WVS was the preferred option here, as it
 contained also information about citizens' attitudes towards science and
 technology, which play an important role in this article.
 
-\hypertarget{case-selection-of-the-paper}{%
-\subsection{Case selection of the
-paper}\label{case-selection-of-the-paper}}
+\hypertarget{selection-of-cases}{%
+\subsection{Selection of cases}\label{selection-of-cases}}
 
 The countries selected for this paper include Germany, Greece, Romania,
 Brazil, and Argentina. Reasons for choosing them within the WVS are
@@ -700,15 +737,14 @@ twofold: (1) because of data availability and thereby (2) being able to
 follow the argumentation of \protect\hyperlink{ref-chiru2022wants}{Chiru
 \& Enyedi} (\protect\hyperlink{ref-chiru2022wants}{2022}). They also
 chose those countries (among others), pointing to different experiences
-with democratic systems, but also different regime types with different
-degrees of corruption, and different backgrounds with technocracy,
-technocratic decision-making, and expert government --- therefore
-providing for a high degree of variation between the cases, and by that,
-a good means of testing hypotheses. Due to data availability, compared
-to \protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
-(\protect\hyperlink{ref-chiru2022wants}{2022}), the Netherlands, the UK,
-Switzerland and Hungary had to be dropped, leaving the countries
-mentioned above to be researched.
+with democratic systems, but also different regime types with e. g.
+different backgrounds with technocracy, technocratic decision-making,
+and expert government --- therefore providing for a high degree of
+variation between the cases, and by that, a good means of testing
+hypotheses (see \protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi,
+2022, p. 100}). Due to data availability, compared to their study, the
+Netherlands, the UK, Switzerland and Hungary had to be dropped, leaving
+the countries mentioned above to be researched.
 
 The case selection shall also be explained in a bit more detail per
 country, also using typologies and data from
@@ -736,7 +772,7 @@ the world (see \protect\hyperlink{ref-windholz2020governing}{Windholz}
 \protect\hyperlink{ref-kuhlmann2021tracing}{Kuhlmann et al.}
 (\protect\hyperlink{ref-kuhlmann2021tracing}{2021})). Also, the media
 sometimes pointed out this tendency (see e. g.
-\protect\hyperlink{ref-FAZ2020virologen}{(FAZ)}
+\protect\hyperlink{ref-FAZ2020virologen}{Frankfurter Allgemeine Zeitung}
 (\protect\hyperlink{ref-FAZ2020virologen}{2020})). Moving on to the two
 South American cases, Argentina and Brazil; both of them have
 experienced a fair share of non-political or `expert' minister
@@ -766,20 +802,26 @@ measures the position of citizens on a scale of 1 (left) to 10 (right).
 The variable was treated as quasi-metric, focusing more on a continuous
 depiction of political ideology, rather than seeing each and every level
 individually as a `statement' of a citizen. It will be used to check H4.
+
 \emph{Perception of corruption in respondents' respective country} is
 used to check H5. It measures on a scale of 1 (no corruption is
 perceived in the country) to 10 (abundant corruption is perceived in the
-country). \emph{Political interest} measures the degree to which a
-citizen is interested in politics and is being used to test H3. It was
-recoded into a binary variable, with 0 meaning ``not politically
-interested'' and 1 meaning ``politically interested.'' This was done to
-ease interpretation. \emph{Political trust} is an index that was created
-from three variables: confidence in national parliament, national
-government, and national parties per citizen, just as suggested in
+country).
+
+\emph{Political interest} measures the degree to which a citizen is
+interested in politics and is being used to test H3. It was recoded into
+a binary variable, with 0 meaning ``not politically interested'' and 1
+meaning ``politically interested.'' This was done to ease
+interpretation.
+
+\emph{Political trust} is an index that was created from three
+variables: confidence in national parliament, national government, and
+national parties per citizen, just as suggested in
 \protect\hyperlink{ref-bertsou2017technocratic}{Bertsou \& Pastorella}
 (\protect\hyperlink{ref-bertsou2017technocratic}{2017}). It is used to
 check for H2 and ranges from 1 (low trust) to 10 (high trust).
 Cronbach's alpha is at 0.87, indicating an excellent fit of the index.
+
 \emph{Satisfaction with democracy} is a variable that has been measured
 quite differently throughout technocracy research (see e. g.
 \protect\hyperlink{ref-bertsou2017technocratic}{Bertsou \& Pastorella}
@@ -791,10 +833,13 @@ with how the political system is functioning in your country these days?
 On the scale from 1 to 10 below, 1 means not satisfied at all and 10
 means completely satisfied.'' This is also the reason why results with
 this variable may not be fully comparable with other studies but the
-variable will be used here to check H1. \emph{Respondents' age,
-education, income} are variables that indicate demographic/economic
-information about individual citizens. They are self-explanatory.
-Educational level and income are part of what is being used to check H6.
+variable will be used here to check H1.
+
+\emph{Respondents' age, education, income} are variables that indicate
+demographic/economic information about individual citizens. They are
+self-explanatory. Educational level and income are part of what is being
+used to check H6.
+
 \emph{Social capital} is also used in H6. It is an index created for
 this study, using
 \protect\hyperlink{ref-franzen2007sozialkapital}{Franzen \& Pointner}
@@ -803,11 +848,12 @@ is captured in an index formed via membership indicator variables for
 church groups, sports clubs, charitable organizations, and
 art/music/recreational organizations. Cronbach's alpha for the index is
 at 0.71, indicating a fitting selection of items. It ranges from 1 (low
-social capital) to 5 (high social capital). \emph{Attitudes towards
-science} is the variable used to test the novel hypothesis H7. It is
-also an index, ranging from 1 (negative view of science) to 10 (positive
-view of science). It was formed from two fitting items, containing the
-following (Cronbach's alpha = 0.75):
+social capital) to 5 (high social capital).
+
+\emph{Attitudes towards science} is the variable used to test the novel
+hypothesis H7. It is also an index, ranging from 1 (negative view of
+science) to 10 (positive view of science). It was formed from two
+fitting items, containing the following (Cronbach's alpha = 0.75):
 
 \begin{itemize}
 \tightlist
@@ -948,10 +994,13 @@ already mentioned by \protect\hyperlink{ref-chiru2022wants}{Chiru \&
 Enyedi} (\protect\hyperlink{ref-chiru2022wants}{2022}): people with
 higher education tend to belong to a social elite that may see
 technocracy as a means to counteract radical forces, creating a save
-haven for their assets. Also, these people may even consider themselves
-to be experts or possess a great amount of knowledge, rendering
-technocracy a viable alternative for them to make their voices more
-heard in politics --- an argument in a more similar vein to
+haven for their assets (contesting the findings of stealth democracy
+literature, e. g. \protect\hyperlink{ref-coffe2014education}{Coffé \&
+Michels} (\protect\hyperlink{ref-coffe2014education}{2014})). Also,
+these people may even consider themselves to be experts or possess a
+great amount of knowledge, rendering technocracy a viable alternative
+for them to make their voices more heard in politics --- an argument in
+a more similar vein to
 \protect\hyperlink{ref-bickerton2020technocracy}{Bickerton \& Accetti}
 (\protect\hyperlink{ref-bickerton2020technocracy}{2020}). \emph{Social
 capital} is also significant in two cases (Germany and Greece), but
@@ -966,7 +1015,7 @@ one-point increase on the social capital scale). With \emph{income}
 having an insignificant coefficient, the effect of \emph{educational
 level}, despite its significance and effect, only being significant in
 one country, and the findings regarding \emph{social capital} being
-somewhat unclear, this paper rejects H6. The findings of
+somewhat unclear, it was decided to reject H6. The findings of
 \protect\hyperlink{ref-chiru2022wants}{Chiru \& Enyedi}
 (\protect\hyperlink{ref-chiru2022wants}{2022}) could not exactly be
 recreated in this paper, indicating that further research has to be done
@@ -981,7 +1030,29 @@ attitudes towards science tend to view technocracy more negatively. The
 effect is rather small quantitatively, indicating factors of 1.08
 (Germany) and 1.06 (Brazil) for \emph{not} having technocratic attitudes
 for a one-point increase on the scale of scientific and technological
-attitudes.
+attitudes. This points to a rejection of the novel hypothesis. The
+reasoning behind this is not entirely clear. One could theorize that,
+within the science community, especially with regard to reproducibility,
+open standards and the open source mentality are very prominent --- thus
+rendering a form of government, where only experts decide based on what
+they consider uncontested truth, unattractive to people that associate
+with this science mentality. In the same vein, Karl Popper's concept of
+falsificationism should also be mentioned. When experts govern by what
+they consider uncontested truth, one could answer with his normative
+approach that in reality, no truth can be seen as uncontested. A third
+reasoning behind this comes from the analysis itself. Even though the
+coefficients are not significant, one can witness that in some countries
+(e. g. especially in Germany or Brazil), the effect of education is
+inverted: people with higher education seem to view technocracy in a bad
+light there, compared with their lower educated peers (this being in
+line again with the stealth democracy literature, see e. g.
+\protect\hyperlink{ref-coffe2014education}{Coffé \& Michels}
+(\protect\hyperlink{ref-coffe2014education}{2014})) --- thus, expecting
+those with high education to have e. g. graduated from university and
+thus as having experienced the scientific world and its values from up
+close, they could possibly also be seen as more critical of technocracy
+because of their higher opinion of science and technology. To conclude,
+it shall nevertheless be said that this is
 
 \begin{figure}
 
@@ -1001,9 +1072,9 @@ attitudes.
 \caption{Regression results as odds ratios}\label{fig:insert graphics: OR table}
 \end{figure}
 
-\hypertarget{discussion-of-results-and-final-considerations}{%
-\section{Discussion of results and final
-considerations}\label{discussion-of-results-and-final-considerations}}
+\hypertarget{discussion-of-results-final-considerations-and-the-way-to-go}{%
+\section{Discussion of results, final considerations and the `way to
+go'}\label{discussion-of-results-final-considerations-and-the-way-to-go}}
 
 It is clear that the novel hypothesis concerning attitudes towards
 science and technology and their effect on technocratic attitudes within
@@ -1078,19 +1149,32 @@ redistribution in any form is not allowed. However, one can download WVS
 wave 7 from their website and adjust the corresponding lines of code
 after cloning the repository.
 
+\newpage{}
+
 \hypertarget{appendix-a-univariate-frequency-table-and-graphics-for-dependent-variable}{%
 \subsection{Appendix A: Univariate frequency table and graphics for
 dependent
 variable}\label{appendix-a-univariate-frequency-table-and-graphics-for-dependent-variable}}
 
-\begin{figure}
-
-{\centering \includegraphics[width=20cm,height=15cm]{freqtable_expert} 
-
-}
-
-\caption{Citizens' attitudes towards technocracy (frequency table)}\label{fig:frequency table expert}
-\end{figure}
+\begin{longtable}[]{@{}lccccc@{}}
+\caption{Citizens' attitudes towards technocracy (frequency table, four
+levels)}\tabularnewline
+\toprule
+& Freq & \% Valid & \% Valid Cum. & \% Total & \% Total Cum. \\
+\midrule
+\endfirsthead
+\toprule
+& Freq & \% Valid & \% Valid Cum. & \% Total & \% Total Cum. \\
+\midrule
+\endhead
+Very good & 1249 & 20.71 & 20.71 & 18.50 & 18.50 \\
+Fairly good & 2213 & 36.69 & 57.40 & 32.79 & 51.29 \\
+Fairly Bad & 1456 & 24.14 & 81.55 & 21.57 & 72.86 \\
+Very bad & 1113 & 18.45 & 100.00 & 16.49 & 89.35 \\
+& 719 & NA & NA & 10.65 & 100.00 \\
+Total & 6750 & 100.00 & 100.00 & 100.00 & 100.00 \\
+\bottomrule
+\end{longtable}
 
 \begin{figure}
 
@@ -1110,19 +1194,58 @@ variable}\label{appendix-a-univariate-frequency-table-and-graphics-for-dependent
 \caption{Citizens' attitudes towards technocracy (binary)}\label{fig:frequencies in data: binary scale}
 \end{figure}
 
+\pagebreak
+
 \hypertarget{appendix-b-bivariate-analysis-of-dependent-variable-per-country}{%
 \subsection{Appendix B: Bivariate analysis of dependent variable per
 country}\label{appendix-b-bivariate-analysis-of-dependent-variable-per-country}}
 
-\includegraphics{seminarPaper_files/figure-latex/technocratic attitudes in citizens by countries --- recreation of Bertsou \& Pastorella graphic with the EVS-1.pdf}
+\begin{figure}
 
-\includegraphics{seminarPaper_files/figure-latex/alternative plot binary-1.pdf}
+{\centering \includegraphics[width=15cm,height=8cm]{seminarPaper_files/figure-latex/technocratic attitudes in citizens by countries --- recreation of Bertsou & Pastorella graphic with the EVS-1} 
+
+}
+
+\caption{Citizens' attitudes towards technocracy (standardized scale, four levels)}\label{fig:technocratic attitudes in citizens by countries --- recreation of Bertsou & Pastorella graphic with the EVS}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=15cm,height=8cm]{seminarPaper_files/figure-latex/alternative plot with binary-1} 
+
+}
+
+\caption{Citizens' attitudes towards technocracy (standardized scale, binary)}\label{fig:alternative plot with binary}
+\end{figure}
+
+\pagebreak
 
 \hypertarget{appendix-c-regression-results-graphical-representation-of-effects}{%
 \subsection{Appendix C: Regression results, graphical representation of
 effects}\label{appendix-c-regression-results-graphical-representation-of-effects}}
 
-\includegraphics{seminarPaper_files/figure-latex/plotting of odds ratios for coefficients-1.pdf}
+\begin{figure}
+
+{\centering \includegraphics[width=16cm,height=10cm]{seminarPaper_files/figure-latex/plotting of odds ratios for coefficients-1} 
+
+}
+
+\caption{Regression coefficients for all countries visualized}\label{fig:plotting of odds ratios for coefficients}
+\end{figure}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\emph{Variable names} & \emph{Description} \\
+\midrule
+\endhead
+corrPerc & Corruption Perception \\
+polInt\_bin1 & Political Interest with reference category \\
+educ & Educational Level \\
+inc & Income \\
+\bottomrule
+\end{longtable}
+
+\newpage{}
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
@@ -1203,16 +1326,16 @@ Review}, \emph{8}(3), 333--354.
 EVS. (2020). \emph{European values study 2017: Integrated dataset (EVS
 2017)}. GESIS Data Archive. Cologne.
 
-\leavevmode\vadjust pre{\hypertarget{ref-FAZ2020virologen}{}}%
-(FAZ), F. A. Z. (2020). \emph{Diese virologen haben das regiment
-übernommen}. Available under:
-https://www.faz.net/aktuell/gesellschaft/diese-virologen-haben-waehrend-der-corona-krise-das-regiment-uebernommen-16692489.html.
-
 \leavevmode\vadjust pre{\hypertarget{ref-font2015participation}{}}%
 Font, J., Wojcieszak, M., \& Navarro, C. J. (2015). Participation,
 representation and expertise: Citizen preferences for political
 decision-making processes. \emph{Political Studies}, \emph{63},
 153--172.
+
+\leavevmode\vadjust pre{\hypertarget{ref-FAZ2020virologen}{}}%
+Frankfurter Allgemeine Zeitung. (2020). \emph{Diese virologen haben das
+regiment übernommen}. Available under:
+https://www.faz.net/aktuell/gesellschaft/diese-virologen-haben-waehrend-der-corona-krise-das-regiment-uebernommen-16692489.html.
 
 \leavevmode\vadjust pre{\hypertarget{ref-franzen2007sozialkapital}{}}%
 Franzen, A., \& Pointner, S. (2007). Sozialkapital: Konzeptualisierungen
